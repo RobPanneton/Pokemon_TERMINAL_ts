@@ -1,4 +1,4 @@
-const prompt = require("prompt-sync")();
+const prompt = require("prompt-sync")({ sigint: true });
 
 const keypress = async (): Promise<void> => {
   process.stdin.setRawMode(true);

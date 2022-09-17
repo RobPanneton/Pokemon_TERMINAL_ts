@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.userInputPrompt = exports.anyKeyPrompt = void 0;
-const prompt = require("prompt-sync")();
+const prompt = require("prompt-sync")({ sigint: true });
 const keypress = () => __awaiter(void 0, void 0, void 0, function* () {
     process.stdin.setRawMode(true);
     return new Promise((resolve) => process.stdin.once("data", () => {
