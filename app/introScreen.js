@@ -33,7 +33,7 @@ const introScreen = () => __awaiter(void 0, void 0, void 0, function* () {
     console.log("     /  /  \\___//  /  /_/ |_/ /| |/ //_/ |_//___/|//  ______/  ");
     console.log("                     ");
     console.log("");
-    yield setTimeout(() => {
+    setTimeout(() => {
         // await anyKeyPrompt("press any key to continue");
     }, 2000);
     yield anyKeyPrompt("press any key to continue");

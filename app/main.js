@@ -14,7 +14,7 @@ const { introScreen } = require("./introScreen");
 // const { teambuilderMainMenu } = require("./teambuilder/teambuilderMainMenu");
 // const { timeDelay } = require("./utils");    FOR GAME PAUSES
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
-    // need async await for prompt to hold
+    // need async await for prompt to await
     yield introScreen();
     //   while (true) {
     //     let mainMenuInput = await mainMenu();

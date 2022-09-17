@@ -1,6 +1,6 @@
 const { anyKeyPrompt } = require("./utils/prompts");
 
-export const introScreen = () => {
+export const introScreen = async () => {
   console.log(
     "                                 _                                 "
   );
@@ -55,7 +55,7 @@ export const introScreen = () => {
   setTimeout(() => {
     // await anyKeyPrompt("press any key to continue");
   }, 2000);
-  anyKeyPrompt("press any key to continue");
+  await anyKeyPrompt("press any key to continue");
 
   return;
 };
