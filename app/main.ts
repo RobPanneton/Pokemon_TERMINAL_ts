@@ -5,9 +5,8 @@ const { introScreen } = require("./introScreen");
 
 // const { timeDelay } = require("./utils");    FOR GAME PAUSES
 
-const start = async () => {
-  // need async await for prompt to hold
-  await introScreen();
+const start = () => {
+  introScreen();
 
   //   while (true) {
   //     let mainMenuInput = await mainMenu();

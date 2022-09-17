@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")();
 
-const keypress = async (): Promise<void> => {
+const keypress = (): Promise<void> => {
   process.stdin.setRawMode(true);
   return new Promise((resolve) =>
     process.stdin.once("data", () => {
@@ -10,9 +10,9 @@ const keypress = async (): Promise<void> => {
   );
 };
 
-export const anyKeyPrompt = async (message: string) => {
+export const anyKeyPrompt = (message: string) => {
   console.log(message);
-  const key = await keypress();
+  const key = keypress();
   process.exit;
 
   return key;
