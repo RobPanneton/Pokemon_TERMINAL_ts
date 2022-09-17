@@ -1,5 +1,5 @@
 const { introScreen } = require("./introScreen");
-// const { mainMenu } = require("./mainMenu");
+const { mainMenu } = require("./mainMenu");
 // const { initiateBattle } = require("./battle/battle");
 // const { teambuilderMainMenu } = require("./teambuilder/teambuilderMainMenu");
 
@@ -9,12 +9,12 @@ const start = async () => {
   // need async await for prompt to await
   await introScreen();
 
-  //   while (true) {
-  //     let mainMenuInput = await mainMenu();
-  //     if (mainMenuInput === 1) await initiateBattle();
-  //     if (mainMenuInput === 2) await teambuilderMainMenu();
-  //     if (mainMenuInput === 9) return await process.exit();
-  //   }
+  while (true) {
+    let mainMenuInput = await mainMenu();
+    //     if (mainMenuInput === 1) await initiateBattle();
+    //     if (mainMenuInput === 2) await teambuilderMainMenu();
+    //     if (mainMenuInput === 9) return await process.exit();
+  }
   return process.exit();
 };
 
