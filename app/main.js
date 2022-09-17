@@ -9,18 +9,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const { introScreen } = require("./introScreen");
 const { mainMenu } = require("./mainMenu");
-// const { initiateBattle } = require("./battle/battle");
-// const { teambuilderMainMenu } = require("./teambuilder/teambuilderMainMenu");
+const { initiateBattle } = require("./battle/battle");
+const { teambuilderMainMenu } = require("./teambuilder/teambuilderMainMenu");
 // const { timeDelay } = require("./utils");    FOR GAME PAUSES
 const start = () => __awaiter(this, void 0, void 0, function* () {
     // need async await for prompt to await
     yield introScreen();
     while (true) {
         let mainMenuInput = yield mainMenu();
-        console.log({ mainMenuInput });
-        //     if (mainMenuInput === 1) await initiateBattle();
-        //     if (mainMenuInput === 2) await teambuilderMainMenu();
-        //     if (mainMenuInput === 9) return await process.exit();
+        if (mainMenuInput === 1)
+            yield initiateBattle();
+        if (mainMenuInput === 2)
+            yield teambuilderMainMenu();
+        if (mainMenuInput === 9)
+            return yield process.exit();
     }
     return process.exit();
 });
