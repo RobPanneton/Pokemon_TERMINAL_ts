@@ -7,5 +7,5 @@ type AttackInfo = {
   power?: number;
   accuracy?: number;
   type?: string;
-  effect?: any; // TO DO
+  effect?: any; // TODO
 };
