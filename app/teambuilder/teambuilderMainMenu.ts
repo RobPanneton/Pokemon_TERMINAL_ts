@@ -1,5 +1,5 @@
-// const { createTeamMain } = require("./createTeam/createTeamMain");
 // const { editTeamMain } = require("./editTeamMain");
+import { createTeamMain } from "./tbCreateTeam/tbCreateTeamMain";
 import { tbMainActionPrompt } from "./tbMenuPrompts/tbFirstActionPrompt";
 
 export const teambuilderMainMenu = (): void => {
@@ -11,13 +11,9 @@ export const teambuilderMainMenu = (): void => {
     tbMainActionInput = tbMainActionPrompt();
   }
 
+  if (tbMainActionInput === 1) createTeamMain();
+  //   if (teambuilderInput === 2) editTeamMain();
+  //   if (teambuilderInput === 3) return;
+
   return process.exit();
 };
-
-// REFORMAT THIS
-// const teambuilderMainMenu = () => {
-
-//   if (teambuilderInput === 1) createTeamMain();
-//   if (teambuilderInput === 2) editTeamMain();
-//   if (teambuilderInput === 3) return;
-// };
