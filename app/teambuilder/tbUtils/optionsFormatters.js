@@ -2,25 +2,21 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.formatSpeciesOptionsString = exports.formatValidSpeciesInputs = void 0;
 const stringFormat_1 = require("../../utils/stringFormat");
-const formatValidSpeciesInputs = (pokemonData) => {
-    return Object.keys(pokemonData).reduce((acc, obj) => {
-        if (pokemonData[obj].attacks.length === 0)
+const pokemon_1 = require("../../stats/pokemon");
+const formatValidSpeciesInputs = () => {
+    return Object.keys(pokemon_1.POKEMON).reduce((acc, obj) => {
+        if (pokemon_1.POKEMON[obj].attacks.length === 0)
             return [...acc];
-        return [
-            ...acc,
-            obj,
-            pokemonData[obj].id,
-            (0, stringFormat_1.removeLeadingZeros)(pokemonData[obj].id),
-        ];
+        return [...acc, obj, pokemon_1.POKEMON[obj].id, (0, stringFormat_1.removeLeadingZeros)(pokemon_1.POKEMON[obj].id)];
     }, []);
 };
 exports.formatValidSpeciesInputs = formatValidSpeciesInputs;
-const formatSpeciesOptionsString = (pokemonData) => {
-    return Object.keys(pokemonData)
+const formatSpeciesOptionsString = () => {
+    return Object.keys(pokemon_1.POKEMON)
         .map((poke, index) => {
         if ((index + 1) % 4 === 0)
-            return `${pokemonData[poke].id}) ${pokemonData[poke].species}\n\n`;
-        return `${pokemonData[poke].id}) ${pokemonData[poke].species}   `;
+            return `${pokemon_1.POKEMON[poke].id}) ${pokemon_1.POKEMON[poke].species}\n\n`;
+        return `${pokemon_1.POKEMON[poke].id}) ${pokemon_1.POKEMON[poke].species}   `;
     })
         .join("");
 };
