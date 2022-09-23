@@ -1,6 +1,6 @@
 import { SpeciesStats } from "../types/SpeciesStats.type";
 
-const POKEMON: SpeciesStats = {
+export const POKEMON: SpeciesStats = {
   VENUSAUR: {
     id: "003",
     species: "VENUSAUR",
@@ -1331,5 +1331,3 @@ const POKEMON: SpeciesStats = {
 //   },
 //   attacks: [],
 // },
-
-module.exports = { POKEMON };

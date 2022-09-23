@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const POKEMON = {
+exports.POKEMON = void 0;
+exports.POKEMON = {
     VENUSAUR: {
         id: "003",
         species: "VENUSAUR",
@@ -1290,4 +1291,3 @@ const POKEMON = {
 //   },
 //   attacks: [],
 // },
-module.exports = { POKEMON };

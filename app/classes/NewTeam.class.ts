@@ -24,12 +24,16 @@ export class NewTeam {
 
   getName = (nameType, nameKey) => {
     const name = userInputPrompt(`Name your ${nameType}: `);
-    this[nameKey] = name;
+    return (this[nameKey] = name);
   };
 
   isFull = () => {
     return Object.keys(this.currentTeam).every(
       (slot) => this.currentTeam[slot] !== null
     );
+  };
+
+  addNewPokemon = (pokemon, slot) => {
+    return (this.currentTeam = { ...this.currentTeam, [slot]: { ...pokemon } });
   };
 }
