@@ -3,7 +3,7 @@ import { userInputPrompt } from "../utils/prompts";
 export class NewTeam {
   trainerName: string;
   teamName: string;
-  team: any; //TOOD << create type TeamPokemon
+  team: any; //TODO << create type TeamPokemon
   currentSlot: number;
 
   constructor() {

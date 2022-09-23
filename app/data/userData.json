@@ -1,5 +1,88 @@
 {
   "teams": {
+    "123123": {
+      "teamName": "123123",
+      "team": {
+        "slot_1": {
+          "id": "slot_1-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+        },
+        "slot_2": {
+          "id": "slot_2-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+        },
+        "slot_3": {
+          "id": "slot_3-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+        },
+        "slot_4": {
+          "id": "slot_4-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+        },
+        "slot_5": {
+          "id": "slot_5-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+        },
+        "slot_6": {
+          "id": "slot_6-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+        }
+      }
+    },
     "teamTest": {
       "teamName": "teamTest",
       "team": {
@@ -163,6 +246,89 @@
             "speed": 298
           },
           "attacks": ["SCRATCH", "GROWL", "EMBER", "LEER"]
+        }
+      }
+    },
+    "123test": {
+      "teamName": "123test",
+      "team": {
+        "slot_1": {
+          "id": "slot_1-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+        },
+        "slot_2": {
+          "id": "slot_2-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+        },
+        "slot_3": {
+          "id": "slot_3-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+        },
+        "slot_4": {
+          "id": "slot_4-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+        },
+        "slot_5": {
+          "id": "slot_5-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+        },
+        "slot_6": {
+          "id": "slot_6-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
         }
       }
     }
