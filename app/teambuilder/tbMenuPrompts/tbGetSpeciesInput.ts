@@ -1,4 +1,5 @@
 import { userInputPrompt } from "../../utils/prompts";
+import { isOnlyNumbers } from "../../utils/validators";
 
 export const tbGetNewSpeciesInput = (pokemonListString, validInputs) => {
   console.log(`${pokemonListString.join("")}   B) Go Back   E) Exit \n`);
@@ -7,7 +8,7 @@ export const tbGetNewSpeciesInput = (pokemonListString, validInputs) => {
   if (userInput.toUpperCase() === "E") process.exit();
   if (userInput.toUpperCase() === "B") return "B";
 
-  if (!/^[0-9]*$/.test(userInput)) userInput = userInput.toUpperCase();
+  if (!isOnlyNumbers(userInput)) userInput = userInput.toUpperCase();
 
   while (!validInputs.includes(userInput)) {
     userInput = userInputPrompt(
