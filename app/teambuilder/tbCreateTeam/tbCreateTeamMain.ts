@@ -55,18 +55,11 @@ export const createTeamMain = () => {
     });
 
     const selectedAttacks = tbAttacksInput(POKEMON[selectedPokemon].attacks);
-  }
 
-  //   newTeam.currentTeam = {
-  //     ...newTeam.currentTeam,
-  //     ["slot_" + newTeam.currentSlot]: {
-  //       id: selectedPokemon,
-  //       species: POKEMON[selectedPokemon].species,
-  //       type: POKEMON[selectedPokemon].type,
-  //       stats: POKEMON[selectedPokemon].stats,
-  //       attacks: selectedAttacks,
-  //     },
-  //   };
+    newTeam.addNewPokemon(POKEMON[selectedPokemon], slot, selectedAttacks);
+
+    console.log(newTeam.currentTeam[slot]);
+  }
 
   //   newTeam.currentSlot++;
   // }

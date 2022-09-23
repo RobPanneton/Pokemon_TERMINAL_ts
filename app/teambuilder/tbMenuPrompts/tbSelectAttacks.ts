@@ -33,8 +33,6 @@ export const tbAttacksInput = (pokemonSpeciesAttacks) => {
 
   if (userSelectedAttacks.length < 4) addTrailingNulls(userSelectedAttacks, 4);
 
-  console.log(userSelectedAttacks);
-
   return userSelectedAttacks;
 };
 

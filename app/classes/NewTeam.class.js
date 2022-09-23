@@ -11,10 +11,15 @@ class NewTeam {
         this.isFull = () => {
             return Object.keys(this.currentTeam).every((slot) => this.currentTeam[slot] !== null);
         };
-        this.addNewPokemon = (pokemon, slot) => {
-            return (this.currentTeam = Object.assign(Object.assign({}, this.currentTeam), { [slot]: Object.assign({}, pokemon) }));
+        this.addNewPokemon = (species, slot, attacks) => {
+            return (this.currentTeam = Object.assign(Object.assign({}, this.currentTeam), { [slot]: {
+                    id: `${slot}-${species.species}`,
+                    species: species.species,
+                    type: species.type,
+                    stats: species.stats,
+                    attacks: attacks,
+                } }));
         };
-        this.trainerName = "";
         this.teamName = "";
         this.currentTeam = {
             slot_1: null,
