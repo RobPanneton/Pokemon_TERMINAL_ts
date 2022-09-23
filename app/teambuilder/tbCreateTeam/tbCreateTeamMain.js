@@ -28,7 +28,8 @@ const createTeamMain = () => {
     let newTeam = new NewTeam_class_1.NewTeam();
     newTeam.getName("team", "teamName");
     // prompt user for inputs
-    for (const [slot] of Object.keys(newTeam.currentTeam)) {
+    for (const slot of Object.keys(newTeam.currentTeam)) {
+        console.log({ slot });
         console.log("CHOOSE A POKEMON !\n");
         const userInput = (0, tbGetSpeciesInput_1.tbGetNewSpeciesInput)(pokemonListString, validInputs);
         if (userInput.toUpperCase() === "B")
