@@ -43,17 +43,9 @@ const createTeamMain = () => {
                 return poke;
         });
         const selectedAttacks = (0, tbSelectAttacks_1.tbAttacksInput)(pokemon_1.POKEMON[selectedPokemon].attacks);
+        newTeam.addNewPokemon(pokemon_1.POKEMON[selectedPokemon], slot, selectedAttacks);
+        console.log(newTeam.currentTeam[slot]);
     }
-    //   newTeam.currentTeam = {
-    //     ...newTeam.currentTeam,
-    //     ["slot_" + newTeam.currentSlot]: {
-    //       id: selectedPokemon,
-    //       species: POKEMON[selectedPokemon].species,
-    //       type: POKEMON[selectedPokemon].type,
-    //       stats: POKEMON[selectedPokemon].stats,
-    //       attacks: selectedAttacks,
-    //     },
-    //   };
     //   newTeam.currentSlot++;
     // }
     // if (userInput === "8") createTeamMain();

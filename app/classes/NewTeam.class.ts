@@ -7,7 +7,6 @@ export class NewTeam {
   currentSlot: number;
 
   constructor() {
-    this.trainerName = "";
     this.teamName = "";
 
     this.currentTeam = {
@@ -33,7 +32,16 @@ export class NewTeam {
     );
   };
 
-  addNewPokemon = (pokemon, slot) => {
-    return (this.currentTeam = { ...this.currentTeam, [slot]: { ...pokemon } });
+  addNewPokemon = (species, slot, attacks) => {
+    return (this.currentTeam = {
+      ...this.currentTeam,
+      [slot]: {
+        id: `${slot}-${species.species}`,
+        species: species.species,
+        type: species.type,
+        stats: species.stats,
+        attacks: attacks,
+      },
+    });
   };
 }
