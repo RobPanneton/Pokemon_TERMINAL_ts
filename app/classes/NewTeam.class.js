@@ -34,7 +34,7 @@ class NewTeam {
             for (const slot of Object.keys(this.team)) {
                 console.log("CHOOSE A POKEMON !\n");
                 const userInput = (0, tbGetSpeciesInput_1.tbGetNewSpeciesInput)((0, optionsFormatters_1.formatSpeciesOptionsString)(), (0, optionsFormatters_1.formatValidSpeciesInputs)());
-                if (userInput.toUpperCase() === "B")
+                if (userInput.toUpperCase() === "R")
                     (0, tbCreateTeamMain_1.createTeamMain)(); // restart teambuild process
                 // find pokemon based on input
                 let selectedPokemon = Object.keys(pokemon_1.POKEMON).find((poke) => {
@@ -49,6 +49,9 @@ class NewTeam {
                 this.addNewPokemon(pokemon_1.POKEMON[selectedPokemon], slot, selectedAttacks);
             }
             return;
+        };
+        this.displayIntro = () => {
+            return console.log("=================================================================\n=======================   CREATE A TEAM   =======================\n=================================================================\n");
         };
         this.teamName = "";
         this.team = {

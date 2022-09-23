@@ -64,7 +64,7 @@ export class NewTeam {
         formatValidSpeciesInputs()
       );
 
-      if (userInput.toUpperCase() === "B") createTeamMain(); // restart teambuild process
+      if (userInput.toUpperCase() === "R") createTeamMain(); // restart teambuild process
 
       // find pokemon based on input
       let selectedPokemon = Object.keys(POKEMON).find((poke) => {
@@ -79,5 +79,11 @@ export class NewTeam {
     }
 
     return;
+  };
+
+  displayIntro = () => {
+    return console.log(
+      "=================================================================\n=======================   CREATE A TEAM   =======================\n=================================================================\n"
+    );
   };
 }

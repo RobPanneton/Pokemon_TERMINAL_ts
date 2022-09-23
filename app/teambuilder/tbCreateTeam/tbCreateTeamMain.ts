@@ -11,11 +11,9 @@ export const createTeamMain = () => {
   // get user data from local json file
   const userDataObj = getLocalDataFromJSON("userData");
 
-  console.log(
-    "=================================================================\n=======================   CREATE A TEAM   =======================\n=================================================================\n"
-  );
-
   let newTeam = new NewTeam();
+
+  newTeam.displayIntro();
 
   newTeam.getName(Object.keys(userDataObj.teams));
 
@@ -25,7 +23,7 @@ export const createTeamMain = () => {
 
   setDataToLocalJSON("userData", newUserDataJSON);
 
-  console.log("team saved!");
+  console.log("Team Saved!");
 
   return;
 };
