@@ -6,10 +6,13 @@ class NewTeam {
     constructor() {
         this.getName = (nameType, nameKey) => {
             const name = (0, prompts_1.userInputPrompt)(`Name your ${nameType}: `);
-            this[nameKey] = name;
+            return (this[nameKey] = name);
         };
         this.isFull = () => {
             return Object.keys(this.currentTeam).every((slot) => this.currentTeam[slot] !== null);
+        };
+        this.addNewPokemon = (pokemon, slot) => {
+            return (this.currentTeam = Object.assign(Object.assign({}, this.currentTeam), { [slot]: Object.assign({}, pokemon) }));
         };
         this.trainerName = "";
         this.teamName = "";

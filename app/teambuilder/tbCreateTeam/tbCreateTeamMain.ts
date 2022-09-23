@@ -2,12 +2,12 @@
 import { writeFileSync, readFileSync } from "fs";
 
 import { NewTeam } from "../../classes/NewTeam.class";
-import { removeLeadingZeros } from "../../utils/stringFormat";
+import { addLeadingZeros, removeLeadingZeros } from "../../utils/stringFormat";
+import { tbGetNewSpeciesInput } from "../tbMenuPrompts/tbGetSpeciesInput";
 
-// const { getNewSpeciesInput } = require("./getNewSpeciesInput");
 // const { getNewAttacks } = require("./getNewAttacks");
 
-const { POKEMON } = require("../../stats/pokemon");
+import { POKEMON } from "../../stats/pokemon";
 
 // for the commit fail
 // NEXT UP : GIVE TEAMS UNIQUE KEYS AND UNIQUE IDS
@@ -28,33 +28,37 @@ export const createTeamMain = () => {
     return `${POKEMON[poke].id}) ${POKEMON[poke].species}   `;
   });
 
-  console.log(validInputs);
+  console.log(
+    "=================================================================\n=======================   CREATE A TEAM   =======================\n=================================================================\n"
+  );
 
-  // console.log(
-  //   "=================================================================\n=======================   CREATE A TEAM   =======================\n=================================================================\n"
-  // );
+  // initiate team
+  let newTeam = new NewTeam();
 
-  // // initiate team
-  // let newTeam = new NewTeam();
+  newTeam.getName("team", "teamName");
 
-  // newTeam.teamName = newTeam.getName("team");
+  // prompt user for inputs
 
-  // // prompt user for inputs
-  // let userInput;
-  // while (!newTeam.isFull()) {
-  //   console.log("CHOOSE A POKEMON !\n");
+  for (const [slot] of Object.keys(newTeam.currentTeam)) {
+    console.log("CHOOSE A POKEMON !\n");
 
-  //   userInput = getNewSpeciesInput(pokemonListString, validInputs);
-  //   if (userInput === "9" || userInput === "8") break;
+    const userInput: string = tbGetNewSpeciesInput(
+      pokemonListString,
+      validInputs
+    );
 
-  //   console.log(userInput);
-  //   // find how to find the pokemon based on input
-  //   let selectedPokemon = Object.keys(POKEMON).find((poke) => {
-  //     if (POKEMON[poke].id === userInput) return poke;
-  //     if (POKEMON[poke].species === userInput) return poke;
-  //     if (POKEMON[poke].id === addLeadingZeros(userInput)) return poke;
-  //   });
+    if (userInput.toUpperCase() === "B") createTeamMain(); // restart teambuild process
 
+    console.log(userInput);
+    // find how to find the pokemon based on input
+    let selectedPokemon = Object.keys(POKEMON).find((poke) => {
+      if (POKEMON[poke].id === userInput) return poke;
+      if (POKEMON[poke].species === userInput) return poke;
+      if (POKEMON[poke].id === addLeadingZeros(userInput)) return poke;
+    });
+
+    console.log(selectedPokemon);
+  }
   //   const selectedAttacks = getNewAttacks(POKEMON[selectedPokemon].attacks);
 
   //   newTeam.currentTeam = {

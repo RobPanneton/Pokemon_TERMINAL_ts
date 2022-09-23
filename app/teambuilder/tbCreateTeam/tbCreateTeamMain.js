@@ -1,47 +1,52 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createTeamMain = void 0;
+const NewTeam_class_1 = require("../../classes/NewTeam.class");
 const stringFormat_1 = require("../../utils/stringFormat");
-// const { getNewSpeciesInput } = require("./getNewSpeciesInput");
+const tbGetSpeciesInput_1 = require("../tbMenuPrompts/tbGetSpeciesInput");
 // const { getNewAttacks } = require("./getNewAttacks");
-const { POKEMON } = require("../../stats/pokemon");
+const pokemon_1 = require("../../stats/pokemon");
 // for the commit fail
 // NEXT UP : GIVE TEAMS UNIQUE KEYS AND UNIQUE IDS
 // MERGING THESE OBJECTS WITH THE SAME KEYS WILL NEVER WORK
 // GIVE THEM KEYNAMES AND THEN THEY'LL MERGE PROPERLY, AND YOULL HAVE AN ID TO DELETE WITH IF NEEDED
 const createTeamMain = () => {
     // compile valid inputs
-    const validInputs = Object.keys(POKEMON).reduce((acc, obj) => {
-        if (POKEMON[obj].attacks.length === 0)
+    const validInputs = Object.keys(pokemon_1.POKEMON).reduce((acc, obj) => {
+        if (pokemon_1.POKEMON[obj].attacks.length === 0)
             return [...acc];
-        return [...acc, obj, POKEMON[obj].id, (0, stringFormat_1.removeLeadingZeros)(POKEMON[obj].id)];
+        return [...acc, obj, pokemon_1.POKEMON[obj].id, (0, stringFormat_1.removeLeadingZeros)(pokemon_1.POKEMON[obj].id)];
     }, []);
     // set list for display menu
-    const pokemonListString = Object.keys(POKEMON).map((poke, index) => {
+    const pokemonListString = Object.keys(pokemon_1.POKEMON).map((poke, index) => {
         if ((index + 1) % 4 === 0)
-            return `${POKEMON[poke].id}) ${POKEMON[poke].species}\n\n`;
-        return `${POKEMON[poke].id}) ${POKEMON[poke].species}   `;
+            return `${pokemon_1.POKEMON[poke].id}) ${pokemon_1.POKEMON[poke].species}\n\n`;
+        return `${pokemon_1.POKEMON[poke].id}) ${pokemon_1.POKEMON[poke].species}   `;
     });
-    console.log(validInputs);
-    // console.log(
-    //   "=================================================================\n=======================   CREATE A TEAM   =======================\n=================================================================\n"
-    // );
-    // // initiate team
-    // let newTeam = new NewTeam();
-    // newTeam.teamName = newTeam.getName("team");
-    // // prompt user for inputs
-    // let userInput;
-    // while (!newTeam.isFull()) {
-    //   console.log("CHOOSE A POKEMON !\n");
-    //   userInput = getNewSpeciesInput(pokemonListString, validInputs);
-    //   if (userInput === "9" || userInput === "8") break;
-    //   console.log(userInput);
-    //   // find how to find the pokemon based on input
-    //   let selectedPokemon = Object.keys(POKEMON).find((poke) => {
-    //     if (POKEMON[poke].id === userInput) return poke;
-    //     if (POKEMON[poke].species === userInput) return poke;
-    //     if (POKEMON[poke].id === addLeadingZeros(userInput)) return poke;
-    //   });
+    console.log("=================================================================\n=======================   CREATE A TEAM   =======================\n=================================================================\n");
+    // initiate team
+    let newTeam = new NewTeam_class_1.NewTeam();
+    newTeam.getName("team", "teamName");
+    // prompt user for inputs
+    for (const [slot] of Object.keys(newTeam.currentTeam)) {
+        console.log("CHOOSE A POKEMON !\n");
+        const userInput = (0, tbGetSpeciesInput_1.tbGetNewSpeciesInput)(pokemonListString, validInputs);
+        if (userInput.toUpperCase() === "E")
+            process.exit();
+        if (userInput.toUpperCase() === "B")
+            (0, exports.createTeamMain)();
+        console.log(userInput);
+        // find how to find the pokemon based on input
+        let selectedPokemon = Object.keys(pokemon_1.POKEMON).find((poke) => {
+            if (pokemon_1.POKEMON[poke].id === userInput)
+                return poke;
+            if (pokemon_1.POKEMON[poke].species === userInput)
+                return poke;
+            if (pokemon_1.POKEMON[poke].id === (0, stringFormat_1.addLeadingZeros)(userInput))
+                return poke;
+        });
+        console.log(selectedPokemon);
+    }
     //   const selectedAttacks = getNewAttacks(POKEMON[selectedPokemon].attacks);
     //   newTeam.currentTeam = {
     //     ...newTeam.currentTeam,
