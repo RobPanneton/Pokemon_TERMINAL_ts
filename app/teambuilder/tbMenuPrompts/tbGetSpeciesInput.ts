@@ -2,7 +2,7 @@ import { userInputPrompt } from "../../utils/prompts";
 import { isOnlyNumbers } from "../../utils/validators";
 
 export const tbGetNewSpeciesInput = (pokemonListString, validInputs) => {
-  console.log(`${pokemonListString.join("")}   B) Go Back   E) Exit \n`);
+  console.log(`${pokemonListString}   B) Go Back   E) Exit \n`);
   let userInput = userInputPrompt("Choose a Pokemon: ");
 
   if (userInput.toUpperCase() === "E") process.exit();

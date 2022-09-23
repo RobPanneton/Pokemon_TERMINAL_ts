@@ -4,7 +4,7 @@ exports.tbGetNewSpeciesInput = void 0;
 const prompts_1 = require("../../utils/prompts");
 const validators_1 = require("../../utils/validators");
 const tbGetNewSpeciesInput = (pokemonListString, validInputs) => {
-    console.log(`${pokemonListString.join("")}   B) Go Back   E) Exit \n`);
+    console.log(`${pokemonListString}   B) Go Back   E) Exit \n`);
     let userInput = (0, prompts_1.userInputPrompt)("Choose a Pokemon: ");
     if (userInput.toUpperCase() === "E")
         process.exit();

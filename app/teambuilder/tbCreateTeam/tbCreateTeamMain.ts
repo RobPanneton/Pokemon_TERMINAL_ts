@@ -7,6 +7,10 @@ import { tbGetNewSpeciesInput } from "../tbMenuPrompts/tbGetSpeciesInput";
 import { tbAttacksInput } from "../tbMenuPrompts/tbSelectAttacks";
 
 import { POKEMON } from "../../stats/pokemon";
+import {
+  formatSpeciesOptionsString,
+  formatValidSpeciesInputs,
+} from "../tbUtils/optionsFormatters";
 
 // for the commit fail
 // NEXT UP : GIVE TEAMS UNIQUE KEYS AND UNIQUE IDS
@@ -14,18 +18,15 @@ import { POKEMON } from "../../stats/pokemon";
 // GIVE THEM KEYNAMES AND THEN THEY'LL MERGE PROPERLY, AND YOULL HAVE AN ID TO DELETE WITH IF NEEDED
 
 export const createTeamMain = () => {
+  // get user data from local json file
+  const userDataObj = JSON.parse(
+    readFileSync("./teams/userData.json", "utf-8")
+  );
   // compile valid inputs
-  const validInputs = Object.keys(POKEMON).reduce((acc, obj) => {
-    if (POKEMON[obj].attacks.length === 0) return [...acc];
-    return [...acc, obj, POKEMON[obj].id, removeLeadingZeros(POKEMON[obj].id)];
-  }, []);
+  const validInputs = formatValidSpeciesInputs(POKEMON);
 
   // set list for display menu
-  const pokemonListString = Object.keys(POKEMON).map((poke, index) => {
-    if ((index + 1) % 4 === 0)
-      return `${POKEMON[poke].id}) ${POKEMON[poke].species}\n\n`;
-    return `${POKEMON[poke].id}) ${POKEMON[poke].species}   `;
-  });
+  const pokemonListString = formatSpeciesOptionsString(POKEMON);
 
   console.log(
     "=================================================================\n=======================   CREATE A TEAM   =======================\n=================================================================\n"
@@ -34,11 +35,10 @@ export const createTeamMain = () => {
   // initiate team
   let newTeam = new NewTeam();
 
-  newTeam.getName("team", "teamName");
+  newTeam.getName(Object.keys(userDataObj.teams));
 
   // prompt user for inputs
-  for (const slot of Object.keys(newTeam.currentTeam)) {
-    console.log({ slot });
+  for (const slot of Object.keys(newTeam.team)) {
     console.log("CHOOSE A POKEMON !\n");
 
     const userInput: string = tbGetNewSpeciesInput(
@@ -58,33 +58,23 @@ export const createTeamMain = () => {
     const selectedAttacks = tbAttacksInput(POKEMON[selectedPokemon].attacks);
 
     newTeam.addNewPokemon(POKEMON[selectedPokemon], slot, selectedAttacks);
-
-    console.log(newTeam.currentTeam[slot]);
   }
 
-  //   newTeam.currentSlot++;
-  // }
+  const newTeamsObj = {
+    ...userDataObj.teams,
+    [newTeam.teamName]: {
+      ...newTeam,
+    },
+  };
 
-  // if (userInput === "8") createTeamMain();
-  // if (userInput === "9") return;
+  const newUserDataJSON = JSON.stringify({
+    ...userDataObj,
+    teams: newTeamsObj,
+  });
 
-  // // setTimeout(() => {}, 0); <<< to add saving time
-  // console.log("Saving team...");
+  writeFileSync("./teams/userData.json", newUserDataJSON);
 
-  // const currentTeamsJSON = readFileSync("./teams/userTeams.json");
+  console.log("team saved!");
 
-  // const currentTeamsObj = JSON.parse(currentTeamsJSON);
-
-  // console.log({ currentTeamsObj: currentTeamsObj });
-
-  // let combineTeamsObj = { ...currentTeamsObj, ...newTeam };
-
-  // console.log({ combineTeamsObj: combineTeamsObj });
-
-  // const newTeamFileJSON = JSON.stringify({ teams: combineTeamsObj });
-
-  // writeFileSync("./teams/userTeams.json", newTeamFileJSON);
-
-  // console.log("Save Complete !");
   return;
 };
