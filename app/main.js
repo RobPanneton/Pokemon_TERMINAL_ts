@@ -1,3 +1,4 @@
+"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -7,22 +8,23 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const { introScreen } = require("./introScreen");
-const { mainMenu } = require("./mainMenu");
-const { initiateBattle } = require("./battle/battle");
-const { teambuilderMainMenu } = require("./teambuilder/teambuilderMainMenu");
+Object.defineProperty(exports, "__esModule", { value: true });
+const battle_1 = require("./battle/battle");
+const introScreen_1 = require("./introScreen");
+const mainMenu_1 = require("./mainMenu");
+const teambuilderMainMenu_1 = require("./teambuilder/teambuilderMainMenu");
 // const { timeDelay } = require("./utils");    FOR GAME PAUSES
-const start = () => __awaiter(this, void 0, void 0, function* () {
+const start = () => __awaiter(void 0, void 0, void 0, function* () {
     // need async await for prompt to await
-    yield introScreen();
+    yield (0, introScreen_1.introScreen)();
     while (true) {
-        let mainMenuInput = yield mainMenu();
+        let mainMenuInput = (0, mainMenu_1.mainMenu)();
         if (mainMenuInput === 1)
-            yield initiateBattle();
+            (0, battle_1.initiateBattle)();
         if (mainMenuInput === 2)
-            yield teambuilderMainMenu();
+            (0, teambuilderMainMenu_1.teambuilderMainMenu)();
         if (mainMenuInput === 9)
-            return yield process.exit();
+            return process.exit();
     }
     return process.exit();
 });
