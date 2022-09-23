@@ -4,8 +4,7 @@ import { writeFileSync, readFileSync } from "fs";
 import { NewTeam } from "../../classes/NewTeam.class";
 import { addLeadingZeros, removeLeadingZeros } from "../../utils/stringFormat";
 import { tbGetNewSpeciesInput } from "../tbMenuPrompts/tbGetSpeciesInput";
-
-// const { getNewAttacks } = require("./getNewAttacks");
+import { tbAttacksInput } from "../tbMenuPrompts/tbSelectAttacks";
 
 import { POKEMON } from "../../stats/pokemon";
 
@@ -38,7 +37,6 @@ export const createTeamMain = () => {
   newTeam.getName("team", "teamName");
 
   // prompt user for inputs
-
   for (const [slot] of Object.keys(newTeam.currentTeam)) {
     console.log("CHOOSE A POKEMON !\n");
 
@@ -49,7 +47,6 @@ export const createTeamMain = () => {
 
     if (userInput.toUpperCase() === "B") createTeamMain(); // restart teambuild process
 
-    console.log(userInput);
     // find how to find the pokemon based on input
     let selectedPokemon = Object.keys(POKEMON).find((poke) => {
       if (POKEMON[poke].id === userInput) return poke;
@@ -57,9 +54,8 @@ export const createTeamMain = () => {
       if (POKEMON[poke].id === addLeadingZeros(userInput)) return poke;
     });
 
-    console.log(selectedPokemon);
+    const selectedAttacks = tbAttacksInput(POKEMON[selectedPokemon].attacks);
   }
-  //   const selectedAttacks = getNewAttacks(POKEMON[selectedPokemon].attacks);
 
   //   newTeam.currentTeam = {
   //     ...newTeam.currentTeam,
