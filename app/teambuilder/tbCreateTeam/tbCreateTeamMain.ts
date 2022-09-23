@@ -37,7 +37,8 @@ export const createTeamMain = () => {
   newTeam.getName("team", "teamName");
 
   // prompt user for inputs
-  for (const [slot] of Object.keys(newTeam.currentTeam)) {
+  for (const slot of Object.keys(newTeam.currentTeam)) {
+    console.log({ slot });
     console.log("CHOOSE A POKEMON !\n");
 
     const userInput: string = tbGetNewSpeciesInput(
