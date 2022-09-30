@@ -19,7 +19,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.initiateBattle = void 0;
+const Battle_class_1 = require("../classes/Battle.class");
+const dataUtils_1 = require("../utils/dataUtils");
 const initiateBattle = () => __awaiter(void 0, void 0, void 0, function* () {
+    const userDataObj = (0, dataUtils_1.getLocalDataFromJSON)("userData");
+    const npcDataObj = (0, dataUtils_1.getLocalDataFromJSON)("npcData");
+    let battle = new Battle_class_1.Battle(userDataObj.teams.battleTest.team, userDataObj.playerName, npcDataObj.teams.npcTestTeam.team, npcDataObj.teams.npcTestTeam.trainerName);
+    // battle.initTeams(
+    // userDataObj.teams.battleTest.team,
+    // userDataObj.playerName,
+    // npcDataObj.teams.npcTestTeam.team,
+    // npcDataObj.teams.npcTestTeam.trainerName
+    // );
+    console.dir(battle, { depth: null });
     console.log("initiating battle");
     return process.exit();
 });
