@@ -1,3 +1,4 @@
+import { attackPrompt } from "../battle/battleMenuPrompts/attackPrompt";
 import { BattlePlayer } from "./BattlePlayer.class";
 
 export class Battle {
@@ -20,9 +21,23 @@ export class Battle {
       playerPokemon: this.player.team.slot_1,
       npcPokemon: this.npc.team.slot_1,
     };
+
+    this.logDispatchPokemon(
+      this.player.name,
+      this.currentPokemon.playerPokemon.species
+    );
+    this.logDispatchPokemon(
+      this.npc.name,
+      this.currentPokemon.npcPokemon.species
+    );
   }
 
   logDispatchPokemon(trainerName, pokemonName) {
     console.log(`${trainerName} sent out ${pokemonName}!`);
+  }
+
+  initTurn() {
+    const response = attackPrompt(this.currentPokemon.playerPokemon.attacks);
+    console.log(response);
   }
 }

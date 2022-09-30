@@ -17,6 +17,8 @@ export const initiateBattle = async () => {
 
   // add team selectors and prompts here
 
+  console.log("\n");
+
   let battle = new Battle(
     userDataObj.teams.battleTest.team,
     userDataObj.playerName,
@@ -24,15 +26,9 @@ export const initiateBattle = async () => {
     npcDataObj.teams.npcTestTeam.trainerName
   );
 
-  console.log("\n");
-  battle.logDispatchPokemon(
-    battle.player.name,
-    battle.currentPokemon.playerPokemon.species
-  );
-  battle.logDispatchPokemon(
-    battle.npc.name,
-    battle.currentPokemon.npcPokemon.species
-  );
+  while (!battle.isFinished) {
+    battle.initTurn();
+  }
 
   console.dir(battle, { depth: null });
 

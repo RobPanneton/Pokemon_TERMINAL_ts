@@ -25,10 +25,11 @@ const initiateBattle = () => __awaiter(void 0, void 0, void 0, function* () {
     const userDataObj = (0, dataUtils_1.getLocalDataFromJSON)("userData");
     const npcDataObj = (0, dataUtils_1.getLocalDataFromJSON)("npcData");
     // add team selectors and prompts here
-    let battle = new Battle_class_1.Battle(userDataObj.teams.battleTest.team, userDataObj.playerName, npcDataObj.teams.npcTestTeam.team, npcDataObj.teams.npcTestTeam.trainerName);
     console.log("\n");
-    battle.logDispatchPokemon(battle.player.name, battle.currentPokemon.playerPokemon.species);
-    battle.logDispatchPokemon(battle.npc.name, battle.currentPokemon.npcPokemon.species);
+    let battle = new Battle_class_1.Battle(userDataObj.teams.battleTest.team, userDataObj.playerName, npcDataObj.teams.npcTestTeam.team, npcDataObj.teams.npcTestTeam.trainerName);
+    while (!battle.isFinished) {
+        battle.initTurn();
+    }
     console.dir(battle, { depth: null });
     return process.exit();
 });
