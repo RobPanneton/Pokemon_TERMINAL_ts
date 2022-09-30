@@ -14,7 +14,7 @@
             "special": 298,
             "speed": 258
           },
-          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+          "attacks": ["TACKLE", "GROWL", "EARTHQUAKE", "VINEWHIP"]
         },
         "slot_2": {
           "id": "slot_2-VENUSAUR",
@@ -27,7 +27,7 @@
             "special": 298,
             "speed": 258
           },
-          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+          "attacks": ["TACKLE", "GROWL", "EARTHQUAKE", "VINEWHIP"]
         },
         "slot_3": {
           "id": "slot_3-VENUSAUR",
@@ -40,7 +40,7 @@
             "special": 298,
             "speed": 258
           },
-          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+          "attacks": ["TACKLE", "GROWL", "EARTHQUAKE", "VINEWHIP"]
         },
         "slot_4": {
           "id": "slot_4-VENUSAUR",
@@ -53,7 +53,7 @@
             "special": 298,
             "speed": 258
           },
-          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+          "attacks": ["TACKLE", "GROWL", "EARTHQUAKE", "VINEWHIP"]
         },
         "slot_5": {
           "id": "slot_5-VENUSAUR",
@@ -66,7 +66,7 @@
             "special": 298,
             "speed": 258
           },
-          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+          "attacks": ["TACKLE", "GROWL", "EARTHQUAKE", "VINEWHIP"]
         },
         "slot_6": {
           "id": "slot_6-VENUSAUR",
@@ -79,7 +79,7 @@
             "special": 298,
             "speed": 258
           },
-          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+          "attacks": ["TACKLE", "GROWL", "EARTHQUAKE", "VINEWHIP"]
         }
       }
     }

@@ -25,9 +25,12 @@ const initiateBattle = () => __awaiter(void 0, void 0, void 0, function* () {
     const userDataObj = (0, dataUtils_1.getLocalDataFromJSON)("userData");
     const npcDataObj = (0, dataUtils_1.getLocalDataFromJSON)("npcData");
     // add team selectors and prompts here
+    console.log("\n");
     let battle = new Battle_class_1.Battle(userDataObj.teams.battleTest.team, userDataObj.playerName, npcDataObj.teams.npcTestTeam.team, npcDataObj.teams.npcTestTeam.trainerName);
+    while (!battle.isFinished) {
+        battle.initTurn();
+    }
     console.dir(battle, { depth: null });
-    console.log("initiating battle");
     return process.exit();
 });
 exports.initiateBattle = initiateBattle;

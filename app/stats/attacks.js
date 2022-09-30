@@ -17,6 +17,7 @@
 // HI JUMP KICK and JUMP KICK
 // HYPER BEAM
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.attacks = void 0;
 // HIGH CRIT RATIO MOVES: CRABHAMMER, KARATE CHOP, SLASH
 // TO BE TESTED:                              ~~~~~~~ TEST TO DOS ~~~~~~~
 // FLINCH : BITE,
@@ -34,7 +35,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // - SUBSITUTE: user does not take recoil damage if it destroys a sub
 // - COUNTER: sub recoil dmg is included in dmg calc if enemy did not move yet (?)
 // BODY SLAM: does not paralyze normal types in gen 1!? woah
-const attacks = {
+exports.attacks = {
     ABSORB: {
         name: "ABSORB",
         power: 20,
@@ -540,7 +541,7 @@ const attacks = {
         name: "GUST",
         power: 40,
         accuracy: 100,
-        type: "FLYING",
+        type: "NORMAL",
     },
     HARDEN: {
         name: "HARDEN",
@@ -707,6 +708,12 @@ const attacks = {
         accuracy: 100,
         type: "GRASS",
     },
+    WINGATTACK: {
+        name: "WING ATTACK",
+        power: 35,
+        accuracy: 100,
+        type: "FLYING",
+    },
 };
 // logic for attack effects
 // effect %
@@ -774,4 +781,3 @@ const attackExample = {
     },
     // try to dynamically code dig, fly, sky attack, etc, charge up and recharge moves
 };
-module.exports = { attacks };

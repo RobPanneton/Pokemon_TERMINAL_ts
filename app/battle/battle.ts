@@ -17,15 +17,21 @@ export const initiateBattle = async () => {
 
   // add team selectors and prompts here
 
+  console.log("\n");
+
   let battle = new Battle(
     userDataObj.teams.battleTest.team,
     userDataObj.playerName,
     npcDataObj.teams.npcTestTeam.team,
     npcDataObj.teams.npcTestTeam.trainerName
   );
+
+  while (!battle.isFinished) {
+    battle.initTurn();
+  }
+
   console.dir(battle, { depth: null });
 
-  console.log("initiating battle");
   return process.exit();
 };
 

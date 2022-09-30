@@ -1,3 +1,5 @@
+import { attacks } from "../stats/attacks";
+
 export class BattlePlayer {
   name: string;
   type: string;
@@ -21,8 +23,15 @@ export class BattlePlayer {
           },
           level: 100,
           fainted: false,
+          attacks: this.mapAttacks(team[slot].attacks),
         },
       };
     }, {});
+  }
+
+  private mapAttacks(monAttacks) {
+    return monAttacks.map((mAtk) => {
+      return attacks[mAtk];
+    });
   }
 }

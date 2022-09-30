@@ -19,3 +19,11 @@ export const removeLeadingZeros = (stringNum) => {
 export const addLeadingZeros = (stringNum) => {
   return stringNum.length < 3 ? addLeadingZeros(`0${stringNum}`) : stringNum;
 };
+
+export const getSlotFromId = (id: string) => {
+  return id.split("-")[0];
+};
+
+export const removeSpaces = (s: string) => {
+  return s.split(" ").join("");
+};

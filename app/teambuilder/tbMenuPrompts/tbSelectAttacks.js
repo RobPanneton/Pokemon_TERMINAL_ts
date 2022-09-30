@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.tbAttacksInput = void 0;
 const prompts_1 = require("../../utils/prompts");
+const stringFormat_1 = require("../../utils/stringFormat");
 const validators_1 = require("../../utils/validators");
 const tbAttacksInput = (pokemonSpeciesAttacks) => {
     let attackListTemp = [...pokemonSpeciesAttacks];
@@ -19,11 +20,11 @@ const tbAttacksInput = (pokemonSpeciesAttacks) => {
         console.log("\nSelect an Attack\n");
         console.log(attackListString);
         let attackSelectedInput = (0, prompts_1.userInputPrompt)("\nChoose an attack: ");
-        while (Number(attackSelectedInput) >= attackListTemp.length &&
+        while (Number(attackSelectedInput) > attackListTemp.length ||
             !(0, validators_1.isOnlyNumbers)(attackSelectedInput)) {
             attackSelectedInput = (0, prompts_1.userInputPrompt)("Please enter a valid option: ");
         }
-        userSelectedAttacks.push(attackListTemp[Number(attackSelectedInput) - 1]);
+        userSelectedAttacks.push((0, stringFormat_1.removeSpaces)(attackListTemp[Number(attackSelectedInput) - 1]));
         attackListTemp.splice(Number(attackSelectedInput) - 1, 1);
     }
     if (userSelectedAttacks.length < 4)
