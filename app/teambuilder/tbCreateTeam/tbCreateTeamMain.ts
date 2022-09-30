@@ -1,4 +1,3 @@
-// const { writeFileSync, readFileSync } = require("fs");
 import { NewTeam } from "../../classes/NewTeam.class";
 
 import { formatNewTeamData } from "../tbUtils/dataUpdateFormatters";
