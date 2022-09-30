@@ -541,7 +541,7 @@ exports.attacks = {
         name: "GUST",
         power: 40,
         accuracy: 100,
-        type: "FLYING",
+        type: "NORMAL",
     },
     HARDEN: {
         name: "HARDEN",
@@ -707,6 +707,12 @@ exports.attacks = {
         power: 35,
         accuracy: 100,
         type: "GRASS",
+    },
+    WINGATTACK: {
+        name: "WING ATTACK",
+        power: 35,
+        accuracy: 100,
+        type: "FLYING",
     },
 };
 // logic for attack effects

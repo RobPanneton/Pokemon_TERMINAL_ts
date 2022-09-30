@@ -1,5 +1,4 @@
 import { attacks } from "../stats/attacks";
-import { removeSpaces } from "../utils/stringFormat";
 
 export class BattlePlayer {
   name: string;
@@ -32,9 +31,6 @@ export class BattlePlayer {
 
   private mapAttacks(monAttacks) {
     return monAttacks.map((mAtk) => {
-      const moveId = removeSpaces(mAtk);
-      console.log(mAtk);
-      console.log(attacks[moveId]);
       return attacks[mAtk];
     });
   }

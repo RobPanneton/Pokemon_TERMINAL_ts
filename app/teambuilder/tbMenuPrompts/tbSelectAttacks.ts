@@ -1,4 +1,5 @@
 import { userInputPrompt } from "../../utils/prompts";
+import { removeSpaces } from "../../utils/stringFormat";
 import { isOnlyNumbers } from "../../utils/validators";
 
 export const tbAttacksInput = (pokemonSpeciesAttacks) => {
@@ -26,8 +27,10 @@ export const tbAttacksInput = (pokemonSpeciesAttacks) => {
     ) {
       attackSelectedInput = userInputPrompt("Please enter a valid option: ");
     }
-    //
-    userSelectedAttacks.push(attackListTemp[Number(attackSelectedInput) - 1]);
+
+    userSelectedAttacks.push(
+      removeSpaces(attackListTemp[Number(attackSelectedInput) - 1])
+    );
     attackListTemp.splice(Number(attackSelectedInput) - 1, 1);
   }
 

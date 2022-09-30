@@ -548,7 +548,7 @@ export const attacks: AttackStats = {
     name: "GUST",
     power: 40,
     accuracy: 100,
-    type: "FLYING",
+    type: "NORMAL",
   },
   HARDEN: {
     name: "HARDEN",
@@ -715,6 +715,12 @@ export const attacks: AttackStats = {
     power: 35,
     accuracy: 100,
     type: "GRASS",
+  },
+  WINGATTACK: {
+    name: "WING ATTACK",
+    power: 35,
+    accuracy: 100,
+    type: "FLYING",
   },
 };
 

@@ -14,7 +14,7 @@
             "special": 268,
             "speed": 254
           },
-          "attacks": ["SURF", "ICE BEAM", "STRENGTH", "HYDRO PUMP"]
+          "attacks": ["SURF", "ICEBEAM", "STRENGTH", "HYDROPUMP"]
         },
         "slot_2": {
           "id": "slot_2-CHARIZARD",
@@ -27,7 +27,7 @@
             "special": 268,
             "speed": 298
           },
-          "attacks": ["FLAMETHROWER", "STRENGTH", "FIRE BLAST", "EARTHQUAKE"]
+          "attacks": ["FLAMETHROWER", "STRENGTH", "FIREBLAST", "EARTHQUAKE"]
         },
         "slot_3": {
           "id": "slot_3-VENUSAUR",
@@ -40,7 +40,7 @@
             "special": 298,
             "speed": 258
           },
-          "attacks": ["TACKLE", "GROWL", "EARTHQUAKE", "VINE WHIP"]
+          "attacks": ["TACKLE", "GROWL", "EARTHQUAKE", "VINEWHIP"]
         },
         "slot_4": {
           "id": "slot_4-NIDOKING",
@@ -53,7 +53,7 @@
             "special": 248,
             "speed": 250
           },
-          "attacks": ["EARTHQUAKE", null, "ICE BEAM", "THUNDER"]
+          "attacks": ["EARTHQUAKE", "FIREBLAST", "ICEBEAM", "THUNDER"]
         },
         "slot_5": {
           "id": "slot_5-RAICHU",
@@ -66,7 +66,7 @@
             "special": 278,
             "speed": 298
           },
-          "attacks": ["THUNDER", "QUICK ATTACK", "SWIFT", "THUNDER WAVE"]
+          "attacks": ["THUNDER", "TACKLE", "GROWL", "THUNDERBOLT"]
         },
         "slot_6": {
           "id": "slot_6-PIDGEOT",
@@ -79,7 +79,7 @@
             "special": 238,
             "speed": 280
           },
-          "attacks": ["WING ATTACK", "QUICK ATTACK", "SAND-ATTACK", "GUST"]
+          "attacks": ["WINGATTACK", "TACKLE", "TACKLE", "GUST"]
         }
       }
     },
