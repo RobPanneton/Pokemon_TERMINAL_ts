@@ -26,8 +26,8 @@ const initiateBattle = () => __awaiter(void 0, void 0, void 0, function* () {
     const npcDataObj = (0, dataUtils_1.getLocalDataFromJSON)("npcData");
     // add team selectors and prompts here
     let battle = new Battle_class_1.Battle(userDataObj.teams.battleTest.team, userDataObj.playerName, npcDataObj.teams.npcTestTeam.team, npcDataObj.teams.npcTestTeam.trainerName);
-    console.dir(battle, { depth: null });
-    console.log("initiating battle");
+    // console.log("initiating battle");
+    // console.dir(battle.currentPokemon, { depth: null });
     return process.exit();
 });
 exports.initiateBattle = initiateBattle;

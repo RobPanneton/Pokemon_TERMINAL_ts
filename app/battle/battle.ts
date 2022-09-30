@@ -23,9 +23,11 @@ export const initiateBattle = async () => {
     npcDataObj.teams.npcTestTeam.team,
     npcDataObj.teams.npcTestTeam.trainerName
   );
-  console.dir(battle, { depth: null });
 
-  console.log("initiating battle");
+  // console.log("initiating battle");
+
+  // console.dir(battle.currentPokemon, { depth: null });
+
   return process.exit();
 };
 
