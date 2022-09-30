@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getSlotFromId = exports.addLeadingZeros = exports.removeLeadingZeros = exports.pascaleCase = void 0;
+exports.removeSpaces = exports.getSlotFromId = exports.addLeadingZeros = exports.removeLeadingZeros = exports.pascaleCase = void 0;
 const pascaleCase = (string) => __awaiter(void 0, void 0, void 0, function* () {
     return string
         .split("")
@@ -34,3 +34,7 @@ const getSlotFromId = (id) => {
     return id.split("-")[0];
 };
 exports.getSlotFromId = getSlotFromId;
+const removeSpaces = (s) => {
+    return s.split(" ").join("");
+};
+exports.removeSpaces = removeSpaces;

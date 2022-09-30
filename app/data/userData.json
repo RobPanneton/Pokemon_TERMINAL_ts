@@ -27,7 +27,7 @@
             "special": 268,
             "speed": 298
           },
-          "attacks": ["FLAMETHROWER", "SLASH", "RAGE", "EARTHQUAKE"]
+          "attacks": ["FLAMETHROWER", "STRENGTH", "FIRE BLAST", "EARTHQUAKE"]
         },
         "slot_3": {
           "id": "slot_3-VENUSAUR",
@@ -40,7 +40,7 @@
             "special": 298,
             "speed": 258
           },
-          "attacks": ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
+          "attacks": ["TACKLE", "GROWL", "EARTHQUAKE", "VINE WHIP"]
         },
         "slot_4": {
           "id": "slot_4-NIDOKING",

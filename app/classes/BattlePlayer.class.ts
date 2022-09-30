@@ -1,3 +1,6 @@
+import { attacks } from "../stats/attacks";
+import { removeSpaces } from "../utils/stringFormat";
+
 export class BattlePlayer {
   name: string;
   type: string;
@@ -21,8 +24,18 @@ export class BattlePlayer {
           },
           level: 100,
           fainted: false,
+          attacks: this.mapAttacks(team[slot].attacks),
         },
       };
     }, {});
+  }
+
+  private mapAttacks(monAttacks) {
+    return monAttacks.map((mAtk) => {
+      const moveId = removeSpaces(mAtk);
+      console.log(mAtk);
+      console.log(attacks[moveId]);
+      return attacks[mAtk];
+    });
   }
 }

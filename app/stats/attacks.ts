@@ -41,7 +41,7 @@ import { AttackStats } from "../types/AttackStats.type";
 
 // BODY SLAM: does not paralyze normal types in gen 1!? woah
 
-const attacks: AttackStats = {
+export const attacks: AttackStats = {
   ABSORB: {
     name: "ABSORB",
     power: 20,
@@ -785,5 +785,3 @@ const attackExample = {
   },
   // try to dynamically code dig, fly, sky attack, etc, charge up and recharge moves
 };
-
-module.exports = { attacks };

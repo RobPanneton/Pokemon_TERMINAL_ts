@@ -19,7 +19,7 @@ const tbAttacksInput = (pokemonSpeciesAttacks) => {
         console.log("\nSelect an Attack\n");
         console.log(attackListString);
         let attackSelectedInput = (0, prompts_1.userInputPrompt)("\nChoose an attack: ");
-        while (Number(attackSelectedInput) >= attackListTemp.length &&
+        while (Number(attackSelectedInput) > attackListTemp.length ||
             !(0, validators_1.isOnlyNumbers)(attackSelectedInput)) {
             attackSelectedInput = (0, prompts_1.userInputPrompt)("Please enter a valid option: ");
         }

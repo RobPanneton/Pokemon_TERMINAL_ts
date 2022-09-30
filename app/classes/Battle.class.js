@@ -10,9 +10,6 @@ class Battle {
             playerPokemon: this.player.team.slot_1,
             npcPokemon: this.npc.team.slot_1,
         };
-        console.log("\n");
-        this.logDispatchPokemon(this.player.name, this.currentPokemon.playerPokemon.species);
-        this.logDispatchPokemon(this.npc.name, this.currentPokemon.npcPokemon.species);
     }
     logDispatchPokemon(trainerName, pokemonName) {
         console.log(`${trainerName} sent out ${pokemonName}!`);

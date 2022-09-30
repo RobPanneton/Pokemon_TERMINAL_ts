@@ -21,7 +21,7 @@ export const tbAttacksInput = (pokemonSpeciesAttacks) => {
     let attackSelectedInput: string = userInputPrompt("\nChoose an attack: ");
 
     while (
-      Number(attackSelectedInput) >= attackListTemp.length &&
+      Number(attackSelectedInput) > attackListTemp.length ||
       !isOnlyNumbers(attackSelectedInput)
     ) {
       attackSelectedInput = userInputPrompt("Please enter a valid option: ");
