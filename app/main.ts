@@ -1,7 +1,7 @@
-const { introScreen } = require("./introScreen");
-const { mainMenu } = require("./mainMenu");
-const { initiateBattle } = require("./battle/battle");
-const { teambuilderMainMenu } = require("./teambuilder/teambuilderMainMenu");
+import { initiateBattle } from "./battle/battle";
+import { introScreen } from "./introScreen";
+import { mainMenu } from "./mainMenu";
+import { teambuilderMainMenu } from "./teambuilder/teambuilderMainMenu";
 
 // const { timeDelay } = require("./utils");    FOR GAME PAUSES
 
@@ -10,10 +10,10 @@ const start = async () => {
   await introScreen();
 
   while (true) {
-    let mainMenuInput = await mainMenu();
-    if (mainMenuInput === 1) await initiateBattle();
-    if (mainMenuInput === 2) await teambuilderMainMenu();
-    if (mainMenuInput === 9) return await process.exit();
+    let mainMenuInput = mainMenu();
+    if (mainMenuInput === 1) initiateBattle();
+    if (mainMenuInput === 2) teambuilderMainMenu();
+    if (mainMenuInput === 9) return process.exit();
   }
   return process.exit();
 };

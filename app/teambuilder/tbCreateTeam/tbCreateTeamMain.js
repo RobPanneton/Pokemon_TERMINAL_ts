@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createTeamMain = void 0;
-// const { writeFileSync, readFileSync } = require("fs");
 const NewTeam_class_1 = require("../../classes/NewTeam.class");
 const dataUpdateFormatters_1 = require("../tbUtils/dataUpdateFormatters");
 const dataUtils_1 = require("../../utils/dataUtils");
