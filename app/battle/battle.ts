@@ -8,7 +8,23 @@
 // const { userTeams } = require("../teams/userTeams");
 // const { npcTeams } = require("../teams/npcTeams");
 
+import { Battle } from "../classes/Battle.class";
+import { getLocalDataFromJSON } from "../utils/dataUtils";
+
 export const initiateBattle = async () => {
+  const userDataObj = getLocalDataFromJSON("userData");
+  const npcDataObj = getLocalDataFromJSON("npcData");
+
+  // add team selectors and prompts here
+
+  let battle = new Battle(
+    userDataObj.teams.battleTest.team,
+    userDataObj.playerName,
+    npcDataObj.teams.npcTestTeam.team,
+    npcDataObj.teams.npcTestTeam.trainerName
+  );
+  console.dir(battle, { depth: null });
+
   console.log("initiating battle");
   return process.exit();
 };
