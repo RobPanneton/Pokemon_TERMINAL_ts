@@ -26,7 +26,7 @@ export const tbAttacksInput = (pokemonSpeciesAttacks) => {
     ) {
       attackSelectedInput = userInputPrompt("Please enter a valid option: ");
     }
-
+    //
     userSelectedAttacks.push(attackListTemp[Number(attackSelectedInput) - 1]);
     attackListTemp.splice(Number(attackSelectedInput) - 1, 1);
   }
