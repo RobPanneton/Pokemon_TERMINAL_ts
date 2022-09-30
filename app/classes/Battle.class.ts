@@ -40,5 +40,7 @@ export class Battle {
   initTurn() {
     const playerMove = attackPrompt(this.currentPokemon.playerPokemon.attacks);
     const npcMove = getNpcMove(this.currentPokemon.npcPokemon.attacks);
+
+    console.log({ playerMove, npcMove });
   }
 }

@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Battle = void 0;
 const attackPrompt_1 = require("../battle/battleMenuPrompts/attackPrompt");
+const getNpcMove_1 = require("../battle/battleUtils/getNpcMove");
 const BattlePlayer_class_1 = require("./BattlePlayer.class");
 class Battle {
     constructor(playerTeam, playerName, npcTeam, npcName) {
@@ -18,8 +19,9 @@ class Battle {
         console.log(`${trainerName} sent out ${pokemonName}!`);
     }
     initTurn() {
-        const response = (0, attackPrompt_1.attackPrompt)(this.currentPokemon.playerPokemon.attacks);
-        console.log(response);
+        const playerMove = (0, attackPrompt_1.attackPrompt)(this.currentPokemon.playerPokemon.attacks);
+        const npcMove = (0, getNpcMove_1.getNpcMove)(this.currentPokemon.npcPokemon.attacks);
+        console.log({ playerMove, npcMove });
     }
 }
 exports.Battle = Battle;
