@@ -1,36 +1,17 @@
-import {
-  calcTypeMultiplier,
-  getDmgSplit,
-  isThereSTAB,
-} from "../battleUtils/attackUtils";
+import { handleDamage } from "../battleUtils/attackUtils";
+import { calculateDamage } from "./calculateDamage";
 
 export const initAttack = (atkMon, attack, defMon) => {
   // do accuracy check first, and return with missed status if miss
-
-  console.log("trig atack start");
   try {
     if (attack?.power > 0) {
-      const damageSplit = getDmgSplit(attack.type);
-      const [atkStat, defStat] =
-        damageSplit === "SPECIAL"
-          ? [atkMon.stats.special, defMon.stats.special]
-          : [atkMon.stats.attack, defMon.stats.defense];
+      const damage = calculateDamage(atkMon, attack, defMon);
+      defMon.health.hp = handleDamage(defMon.health.hp, damage);
 
-      let damage: number = Math.floor(
-        (((2 * atkMon.level) / 5 + 2) * attack.power * (atkStat / defStat)) /
-          50 +
-          2
+      console.log(
+        `${defMon.species} has ${defMon.health.hp}/${defMon.health.maxHp}HP.\n`
       );
-
-      if (isThereSTAB(atkMon.type, attack)) damage = Math.floor(damage * 1.5);
-
-      const typeMultiplier: number = calcTypeMultiplier(
-        attack.type,
-        defMon.type
-      );
-
-      damage = Math.floor(damage * typeMultiplier);
-      console.log({ attack, typeMultiplier });
+      if (defMon.health.hp === 0) console.log(`${defMon.species} fainted!\n`);
     }
   } catch (e) {
     console.log(e);

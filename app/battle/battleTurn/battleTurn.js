@@ -11,6 +11,7 @@ const battleTurn = (playerMon, playerAttack, npcMon, npcAttack) => {
     (0, initAttack_1.initAttack)(firstMon, firstAtk, secondMon);
     // second attack
     console.log(`\n${secondMon.species} used ${secondAtk.name}!`);
+    (0, initAttack_1.initAttack)(secondMon, secondAtk, firstMon);
     return;
 };
 exports.battleTurn = battleTurn;
