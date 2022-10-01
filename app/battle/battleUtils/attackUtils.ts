@@ -14,12 +14,16 @@ export const isThereSTAB = (monTypes, attack) => {
     : false;
 };
 
-export const calcTypeMultiplier = (atkType, monType) => {
-  return Object.values(monType).reduce((acc: number, type: string) => {
-    if (type === null) return acc;
-    if (typeInteractions[atkType].superEffective.includes(type)) return acc * 2;
-    if (typeInteractions[atkType].resistant.includes(type)) return acc / 2;
-    if (typeInteractions[atkType].immune.includes(type)) return acc * 0;
-    return acc;
-  }, 1);
+export const calcTypeMultiplier = (atkType, monType): number => {
+  return Object.values(monType).reduce<number>(
+    (acc: number, type: string): number => {
+      if (type === null) return acc;
+      if (typeInteractions[atkType].superEffective.includes(type))
+        return acc * 2;
+      if (typeInteractions[atkType].resistant.includes(type)) return acc / 2;
+      if (typeInteractions[atkType].immune.includes(type)) return acc * 0;
+      return acc;
+    },
+    1
+  );
 };

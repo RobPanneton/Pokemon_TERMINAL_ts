@@ -17,7 +17,7 @@ const initAttack = (atkMon, attack, defMon) => {
             if ((0, attackUtils_1.isThereSTAB)(atkMon.type, attack))
                 damage = Math.floor(damage * 1.5);
             const typeMultiplier = (0, attackUtils_1.calcTypeMultiplier)(attack.type, defMon.type);
-            // damage = Math.floor(damage * typeMultiplier);
+            damage = Math.floor(damage * typeMultiplier);
             console.log({ attack, typeMultiplier });
         }
     }

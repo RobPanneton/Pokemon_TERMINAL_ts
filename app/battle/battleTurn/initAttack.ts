@@ -24,9 +24,12 @@ export const initAttack = (atkMon, attack, defMon) => {
 
       if (isThereSTAB(atkMon.type, attack)) damage = Math.floor(damage * 1.5);
 
-      const typeMultiplier = calcTypeMultiplier(attack.type, defMon.type);
+      const typeMultiplier: number = calcTypeMultiplier(
+        attack.type,
+        defMon.type
+      );
 
-      // damage = Math.floor(damage * typeMultiplier);
+      damage = Math.floor(damage * typeMultiplier);
       console.log({ attack, typeMultiplier });
     }
   } catch (e) {
