@@ -1,4 +1,5 @@
 import { attackPrompt } from "../battle/battleMenuPrompts/attackPrompt";
+import { battleTurn } from "../battle/battleTurn/battleTurn";
 import { getNpcMove } from "../battle/battleUtils/getNpcMove";
 import { BattlePlayer } from "./BattlePlayer.class";
 
@@ -42,5 +43,12 @@ export class Battle {
     const npcMove = getNpcMove(this.currentPokemon.npcPokemon.attacks);
 
     console.log({ playerMove, npcMove });
+
+    battleTurn(
+      this.currentPokemon.playerPokemon,
+      playerMove,
+      this.currentPokemon.npcPokemon,
+      npcMove
+    );
   }
 }
