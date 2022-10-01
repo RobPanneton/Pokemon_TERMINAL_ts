@@ -1,3 +1,4 @@
+import { initAttack } from "./initAttack";
 import { whoGoesFirst } from "./whoGoesFirst";
 
 export const battleTurn = (playerMon, playerAttack, npcMon, npcAttack) => {
@@ -11,6 +12,9 @@ export const battleTurn = (playerMon, playerAttack, npcMon, npcAttack) => {
 
   // first attack
   console.log(`\n${firstMon.species} used ${firstAtk.name}!`);
+  initAttack(firstMon, firstAtk, secondMon);
+
+  // second attack
   console.log(`\n${secondMon.species} used ${secondAtk.name}!`);
 
   return;
