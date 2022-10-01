@@ -27,3 +27,7 @@ export const calcTypeMultiplier = (atkType, monType): number => {
     1
   );
 };
+
+export const handleDamage = (hp, damage) => {
+  return hp - damage > 0 ? hp - damage : 0;
+};

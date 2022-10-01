@@ -16,6 +16,9 @@ export const battleTurn = (playerMon, playerAttack, npcMon, npcAttack) => {
 
   // second attack
   console.log(`\n${secondMon.species} used ${secondAtk.name}!`);
+  initAttack(secondMon, secondAtk, firstMon);
+
+  //handle faints -- keep going
 
   return;
 };
