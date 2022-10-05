@@ -62,7 +62,7 @@ export const typeInteractions = {
   },
   ICE: {
     superEffective: ["FLYING", "GROUND", "GRASS", "DRAGON"],
-    resistant: ["FIRE", "ICE"],
+    resistant: ["ICE"],
     immune: [],
   },
   DRAGON: { superEffective: ["DRAGON"], resistant: [], immune: [] },
