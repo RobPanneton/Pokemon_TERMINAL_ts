@@ -1,14 +1,14 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.attackPrompt = void 0;
-const prompts_1 = require("../../utils/prompts");
-const validators_1 = require("../../utils/validators");
-const attackPrompt = (attacks) => {
-    const attackList = attacks.map((attack, index) => {
-        return `${index + 1}) ${attack.name}           `;
+var prompts_1 = require("../../utils/prompts");
+var validators_1 = require("../../utils/validators");
+var attackPrompt = function (attacks) {
+    var attackList = attacks.map(function (attack, index) {
+        return "".concat(index + 1, ") ").concat(attack.name, "           ");
     });
-    console.log(`\n${attackList.join("")}`);
-    let response = Number((0, prompts_1.userInputPrompt)("What will you do ? "));
+    console.log("\n".concat(attackList.join("")));
+    var response = Number((0, prompts_1.userInputPrompt)("What will you do ? "));
     while (response > attackList.length ||
         !(0, validators_1.isOnlyOneToFour)(response.toString())) {
         console.log("\nPlease enter a valid response. \n");

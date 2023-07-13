@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.POKEMON = void 0;
 exports.POKEMON = {
     VENUSAUR: {
@@ -11,9 +11,9 @@ exports.POKEMON = {
             attack: 262,
             defense: 264,
             special: 298,
-            speed: 258,
+            speed: 258
         },
-        attacks: ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"],
+        attacks: ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"]
     },
     CHARIZARD: {
         id: "006",
@@ -24,7 +24,7 @@ exports.POKEMON = {
             attack: 266,
             defense: 254,
             special: 268,
-            speed: 298,
+            speed: 298
         },
         attacks: [
             "SCRATCH",
@@ -35,7 +35,7 @@ exports.POKEMON = {
             "SLASH",
             "FLAMETHROWER",
             "FIRE SPIN",
-        ],
+        ]
     },
     BLASTOISE: {
         id: "009",
@@ -46,7 +46,7 @@ exports.POKEMON = {
             attack: 264,
             defense: 298,
             special: 268,
-            speed: 254,
+            speed: 254
         },
         attacks: [
             "TACKLE",
@@ -59,7 +59,7 @@ exports.POKEMON = {
             "HYDRO PUMP",
             "SURF",
             "STRENGTH",
-        ],
+        ]
     },
     BUTTERFREE: {
         id: "012",
@@ -70,7 +70,7 @@ exports.POKEMON = {
             attack: 188,
             defense: 198,
             special: 258,
-            speed: 238,
+            speed: 238
         },
         attacks: [
             "TACKLE",
@@ -83,7 +83,7 @@ exports.POKEMON = {
             "SUPERSONIC",
             "WHIRLWIND",
             "PSYBEAM",
-        ],
+        ]
     },
     BEEDRILL: {
         id: "015",
@@ -94,7 +94,7 @@ exports.POKEMON = {
             attack: 258,
             defense: 178,
             special: 188,
-            speed: 248,
+            speed: 248
         },
         attacks: [
             "POISON STING",
@@ -118,7 +118,7 @@ exports.POKEMON = {
             "BIDE",
             "SWIFT",
             "CUT",
-        ],
+        ]
     },
     PIDGEOT: {
         id: "018",
@@ -129,7 +129,7 @@ exports.POKEMON = {
             attack: 258,
             defense: 248,
             special: 238,
-            speed: 280,
+            speed: 280
         },
         attacks: [
             "GUST",
@@ -139,7 +139,7 @@ exports.POKEMON = {
             "WING ATTACK",
             "AGILITY",
             "MIRROR MOVE",
-        ],
+        ]
     },
     RATICATE: {
         id: "020",
@@ -150,7 +150,7 @@ exports.POKEMON = {
             attack: 260,
             defense: 218,
             special: 198,
-            speed: 292,
+            speed: 292
         },
         attacks: [
             "TACKLE",
@@ -158,7 +158,7 @@ exports.POKEMON = {
             "QUICK ATTACK",
             "HYPER FANG",
             "SUPER FANG",
-        ],
+        ]
     },
     FEAROW: {
         id: "022",
@@ -169,7 +169,7 @@ exports.POKEMON = {
             attack: 278,
             defense: 228,
             special: 220,
-            speed: 298,
+            speed: 298
         },
         attacks: [
             "PECK",
@@ -179,7 +179,7 @@ exports.POKEMON = {
             "MIRROR MOVE",
             "DRILL PECK",
             "AGILITY",
-        ],
+        ]
     },
     ARBOK: {
         id: "024",
@@ -190,7 +190,7 @@ exports.POKEMON = {
             attack: 268,
             defense: 236,
             special: 228,
-            speed: 258,
+            speed: 258
         },
         attacks: [
             "WRAP",
@@ -200,7 +200,7 @@ exports.POKEMON = {
             "GLARE",
             "SCREECH",
             "ACID",
-        ],
+        ]
     },
     PIKACHU: {
         id: "025",
@@ -211,7 +211,7 @@ exports.POKEMON = {
             attack: 208,
             defense: 158,
             special: 198,
-            speed: 278,
+            speed: 278
         },
         attacks: [
             "THUNDER SHOCK",
@@ -221,7 +221,7 @@ exports.POKEMON = {
             "SWIFT",
             "AGILITY",
             "THUNDER",
-        ],
+        ]
     },
     RAICHU: {
         id: "026",
@@ -232,7 +232,7 @@ exports.POKEMON = {
             attack: 278,
             defense: 208,
             special: 278,
-            speed: 298,
+            speed: 298
         },
         attacks: [
             "THUNDER SHOCK",
@@ -242,7 +242,7 @@ exports.POKEMON = {
             "SWIFT",
             "AGILITY",
             "THUNDER",
-        ],
+        ]
     },
     SANDSLASH: {
         id: "028",
@@ -253,7 +253,7 @@ exports.POKEMON = {
             attack: 298,
             defense: 318,
             special: 208,
-            speed: 228,
+            speed: 228
         },
         attacks: [
             "SCRATCH",
@@ -263,7 +263,7 @@ exports.POKEMON = {
             "SWIFT",
             "FURY SWIPES",
             "EARTHQUAKE",
-        ],
+        ]
     },
     NIDOQUEEN: {
         id: "031",
@@ -274,7 +274,7 @@ exports.POKEMON = {
             attack: 262,
             defense: 272,
             special: 248,
-            speed: 250,
+            speed: 250
         },
         attacks: [
             "SCRATCH",
@@ -316,7 +316,7 @@ exports.POKEMON = {
             "SUBSTITUTE",
             "SURF",
             "STRENGTH",
-        ],
+        ]
     },
     NIDOKING: {
         id: "034",
@@ -327,7 +327,7 @@ exports.POKEMON = {
             attack: 282,
             defense: 252,
             special: 248,
-            speed: 250,
+            speed: 250
         },
         attacks: [
             "LEER",
@@ -370,7 +370,7 @@ exports.POKEMON = {
             "SUBSTITUTE",
             "SURF",
             "STRENGTH",
-        ],
+        ]
     },
     CLEFABLE: {
         id: "036",
@@ -381,9 +381,9 @@ exports.POKEMON = {
             attack: 238,
             defense: 244,
             special: 268,
-            speed: 218,
+            speed: 218
         },
-        attacks: [],
+        attacks: []
     },
     NINETALES: {
         id: "038",
@@ -394,9 +394,9 @@ exports.POKEMON = {
             attack: 250,
             defense: 248,
             special: 298,
-            speed: 298,
+            speed: 298
         },
-        attacks: [],
+        attacks: []
     },
     WIGGLYTUFF: {
         id: "040",
@@ -407,9 +407,9 @@ exports.POKEMON = {
             attack: 238,
             defense: 188,
             special: 198,
-            speed: 188,
+            speed: 188
         },
-        attacks: [],
+        attacks: []
     },
     GOLBAT: {
         id: "042",
@@ -420,9 +420,9 @@ exports.POKEMON = {
             attack: 258,
             defense: 238,
             special: 248,
-            speed: 278,
+            speed: 278
         },
-        attacks: [],
+        attacks: []
     },
     VILEPLUME: {
         id: "045",
@@ -433,9 +433,9 @@ exports.POKEMON = {
             attack: 258,
             defense: 268,
             special: 298,
-            speed: 198,
+            speed: 198
         },
-        attacks: [],
+        attacks: []
     },
     PARASECT: {
         id: "047",
@@ -446,9 +446,9 @@ exports.POKEMON = {
             attack: 288,
             defense: 258,
             special: 258,
-            speed: 158,
+            speed: 158
         },
-        attacks: [],
+        attacks: []
     },
     VENOMOTH: {
         id: "049",
@@ -459,9 +459,9 @@ exports.POKEMON = {
             attack: 228,
             defense: 218,
             special: 278,
-            speed: 278,
+            speed: 278
         },
-        attacks: [],
+        attacks: []
     },
     DUGTRIO: {
         id: "051",
@@ -472,9 +472,9 @@ exports.POKEMON = {
             attack: 258,
             defense: 198,
             special: 238,
-            speed: 338,
+            speed: 338
         },
-        attacks: [],
+        attacks: []
     },
     PERSIAN: {
         id: "053",
@@ -485,9 +485,9 @@ exports.POKEMON = {
             attack: 238,
             defense: 218,
             special: 228,
-            speed: 328,
+            speed: 328
         },
-        attacks: [],
+        attacks: []
     },
     GOLDUCK: {
         id: "055",
@@ -498,9 +498,9 @@ exports.POKEMON = {
             attack: 262,
             defense: 254,
             special: 258,
-            speed: 268,
+            speed: 268
         },
-        attacks: [],
+        attacks: []
     },
     PRIMEAPE: {
         id: "057",
@@ -511,9 +511,9 @@ exports.POKEMON = {
             attack: 308,
             defense: 218,
             special: 218,
-            speed: 288,
+            speed: 288
         },
-        attacks: [],
+        attacks: []
     },
     ARCANINE: {
         id: "059",
@@ -524,9 +524,9 @@ exports.POKEMON = {
             attack: 318,
             defense: 258,
             special: 258,
-            speed: 288,
+            speed: 288
         },
-        attacks: [],
+        attacks: []
     },
     POLIWRATH: {
         id: "062",
@@ -537,9 +537,9 @@ exports.POKEMON = {
             attack: 268,
             defense: 288,
             special: 238,
-            speed: 238,
+            speed: 238
         },
-        attacks: [],
+        attacks: []
     },
     ALAKAZAM: {
         id: "065",
@@ -550,9 +550,9 @@ exports.POKEMON = {
             attack: 198,
             defense: 188,
             special: 368,
-            speed: 338,
+            speed: 338
         },
-        attacks: [],
+        attacks: []
     },
     MACHAMP: {
         id: "068",
@@ -563,9 +563,9 @@ exports.POKEMON = {
             attack: 358,
             defense: 258,
             special: 228,
-            speed: 208,
+            speed: 208
         },
-        attacks: [],
+        attacks: []
     },
     VICTREEBEL: {
         id: "071",
@@ -576,9 +576,9 @@ exports.POKEMON = {
             attack: 308,
             defense: 228,
             special: 298,
-            speed: 238,
+            speed: 238
         },
-        attacks: [],
+        attacks: []
     },
     TENTACRUEL: {
         id: "073",
@@ -589,9 +589,9 @@ exports.POKEMON = {
             attack: 238,
             defense: 228,
             special: 338,
-            speed: 298,
+            speed: 298
         },
-        attacks: [],
+        attacks: []
     },
     GOLEM: {
         id: "076",
@@ -602,9 +602,9 @@ exports.POKEMON = {
             attack: 318,
             defense: 358,
             special: 208,
-            speed: 188,
+            speed: 188
         },
-        attacks: [],
+        attacks: []
     },
     RAPIDASH: {
         id: "078",
@@ -615,9 +615,9 @@ exports.POKEMON = {
             attack: 298,
             defense: 238,
             special: 258,
-            speed: 308,
+            speed: 308
         },
-        attacks: [],
+        attacks: []
     },
     SLOWBRO: {
         id: "080",
@@ -628,9 +628,9 @@ exports.POKEMON = {
             attack: 248,
             defense: 318,
             special: 258,
-            speed: 158,
+            speed: 158
         },
-        attacks: [],
+        attacks: []
     },
     MAGNETON: {
         id: "082",
@@ -641,22 +641,22 @@ exports.POKEMON = {
             attack: 218,
             defense: 288,
             special: 338,
-            speed: 238,
+            speed: 238
         },
-        attacks: [],
+        attacks: []
     },
     FARFETCHD: {
         id: "083",
-        species: `FARFETCH'D`,
+        species: "FARFETCH'D",
         type: { type1: "NORMAL", type2: "FLYING" },
         stats: {
             hp: 307,
             attack: 228,
             defense: 208,
             special: 214,
-            speed: 218,
+            speed: 218
         },
-        attacks: [],
+        attacks: []
     },
     DODRIO: {
         id: "085",
@@ -667,9 +667,9 @@ exports.POKEMON = {
             attack: 318,
             defense: 238,
             special: 218,
-            speed: 298,
+            speed: 298
         },
-        attacks: [],
+        attacks: []
     },
     DEWGONG: {
         id: "087",
@@ -680,9 +680,9 @@ exports.POKEMON = {
             attack: 238,
             defense: 258,
             special: 288,
-            speed: 238,
+            speed: 238
         },
-        attacks: [],
+        attacks: []
     },
     MUK: {
         id: "089",
@@ -693,9 +693,9 @@ exports.POKEMON = {
             attack: 308,
             defense: 248,
             special: 228,
-            speed: 198,
+            speed: 198
         },
-        attacks: [],
+        attacks: []
     },
     CLOYSTER: {
         id: "091",
@@ -706,9 +706,9 @@ exports.POKEMON = {
             attack: 288,
             defense: 458,
             special: 268,
-            speed: 238,
+            speed: 238
         },
-        attacks: [],
+        attacks: []
     },
     GENGAR: {
         id: "094",
@@ -719,9 +719,9 @@ exports.POKEMON = {
             attack: 228,
             defense: 218,
             special: 358,
-            speed: 318,
+            speed: 318
         },
-        attacks: [],
+        attacks: []
     },
     ONIX: {
         id: "095",
@@ -732,9 +732,9 @@ exports.POKEMON = {
             attack: 188,
             defense: 418,
             special: 158,
-            speed: 238,
+            speed: 238
         },
-        attacks: [],
+        attacks: []
     },
     HYPNO: {
         id: "097",
@@ -745,9 +745,9 @@ exports.POKEMON = {
             attack: 244,
             defense: 238,
             special: 328,
-            speed: 232,
+            speed: 232
         },
-        attacks: [],
+        attacks: []
     },
     KINGLER: {
         id: "099",
@@ -758,9 +758,9 @@ exports.POKEMON = {
             attack: 358,
             defense: 328,
             special: 198,
-            speed: 248,
+            speed: 248
         },
-        attacks: [],
+        attacks: []
     },
     ELECTRODE: {
         id: "101",
@@ -771,9 +771,9 @@ exports.POKEMON = {
             attack: 198,
             defense: 238,
             special: 258,
-            speed: 378,
+            speed: 378
         },
-        attacks: [],
+        attacks: []
     },
     EXEGGUTOR: {
         id: "103",
@@ -784,9 +784,9 @@ exports.POKEMON = {
             attack: 288,
             defense: 268,
             special: 348,
-            speed: 208,
+            speed: 208
         },
-        attacks: [],
+        attacks: []
     },
     MAROWAK: {
         id: "105",
@@ -797,9 +797,9 @@ exports.POKEMON = {
             attack: 258,
             defense: 318,
             special: 198,
-            speed: 188,
+            speed: 188
         },
-        attacks: [],
+        attacks: []
     },
     HITMONLEE: {
         id: "106",
@@ -810,9 +810,9 @@ exports.POKEMON = {
             attack: 338,
             defense: 204,
             special: 168,
-            speed: 272,
+            speed: 272
         },
-        attacks: [],
+        attacks: []
     },
     HITMONCHAN: {
         id: "107",
@@ -823,9 +823,9 @@ exports.POKEMON = {
             attack: 308,
             defense: 256,
             special: 168,
-            speed: 250,
+            speed: 250
         },
-        attacks: [],
+        attacks: []
     },
     LICKITUNG: {
         id: "108",
@@ -836,9 +836,9 @@ exports.POKEMON = {
             attack: 208,
             defense: 248,
             special: 218,
-            speed: 158,
+            speed: 158
         },
-        attacks: [],
+        attacks: []
     },
     WEEZING: {
         id: "110",
@@ -849,9 +849,9 @@ exports.POKEMON = {
             attack: 278,
             defense: 338,
             special: 268,
-            speed: 218,
+            speed: 218
         },
-        attacks: [],
+        attacks: []
     },
     RHYDON: {
         id: "112",
@@ -862,9 +862,9 @@ exports.POKEMON = {
             attack: 358,
             defense: 338,
             special: 188,
-            speed: 178,
+            speed: 178
         },
-        attacks: [],
+        attacks: []
     },
     CHANSEY: {
         id: "113",
@@ -875,9 +875,9 @@ exports.POKEMON = {
             attack: 108,
             defense: 108,
             special: 308,
-            speed: 198,
+            speed: 198
         },
-        attacks: [],
+        attacks: []
     },
     TANGELA: {
         id: "114",
@@ -888,9 +888,9 @@ exports.POKEMON = {
             attack: 208,
             defense: 328,
             special: 298,
-            speed: 218,
+            speed: 218
         },
-        attacks: [],
+        attacks: []
     },
     KANGASKHAN: {
         id: "115",
@@ -901,9 +901,9 @@ exports.POKEMON = {
             attack: 288,
             defense: 258,
             special: 178,
-            speed: 278,
+            speed: 278
         },
-        attacks: [],
+        attacks: []
     },
     SEADRA: {
         id: "117",
@@ -914,9 +914,9 @@ exports.POKEMON = {
             attack: 228,
             defense: 288,
             special: 288,
-            speed: 268,
+            speed: 268
         },
-        attacks: [],
+        attacks: []
     },
     SEAKING: {
         id: "119",
@@ -927,9 +927,9 @@ exports.POKEMON = {
             attack: 282,
             defense: 228,
             special: 258,
-            speed: 234,
+            speed: 234
         },
-        attacks: [],
+        attacks: []
     },
     STARMIE: {
         id: "121",
@@ -940,22 +940,22 @@ exports.POKEMON = {
             attack: 248,
             defense: 268,
             special: 298,
-            speed: 328,
+            speed: 328
         },
-        attacks: [],
+        attacks: []
     },
     MRMIME: {
         id: "122",
-        species: `MR.MIME`,
+        species: "MR.MIME",
         type: { type1: "PSYCHIC", type2: null },
         stats: {
             hp: 283,
             attack: 188,
             defense: 228,
             special: 298,
-            speed: 278,
+            speed: 278
         },
-        attacks: [],
+        attacks: []
     },
     SCYTHER: {
         id: "123",
@@ -966,9 +966,9 @@ exports.POKEMON = {
             attack: 318,
             defense: 258,
             special: 208,
-            speed: 308,
+            speed: 308
         },
-        attacks: [],
+        attacks: []
     },
     JYNX: {
         id: "124",
@@ -979,9 +979,9 @@ exports.POKEMON = {
             attack: 198,
             defense: 168,
             special: 288,
-            speed: 288,
+            speed: 288
         },
-        attacks: [],
+        attacks: []
     },
     ELECTABUZZ: {
         id: "125",
@@ -992,9 +992,9 @@ exports.POKEMON = {
             attack: 264,
             defense: 212,
             special: 268,
-            speed: 308,
+            speed: 308
         },
-        attacks: [],
+        attacks: []
     },
     MAGMAR: {
         id: "126",
@@ -1005,9 +1005,9 @@ exports.POKEMON = {
             attack: 288,
             defense: 212,
             special: 268,
-            speed: 284,
+            speed: 284
         },
-        attacks: [],
+        attacks: []
     },
     PINSIR: {
         id: "127",
@@ -1018,9 +1018,9 @@ exports.POKEMON = {
             attack: 348,
             defense: 298,
             special: 208,
-            speed: 268,
+            speed: 268
         },
-        attacks: [],
+        attacks: []
     },
     TAUROS: {
         id: "128",
@@ -1031,7 +1031,7 @@ exports.POKEMON = {
             attack: 298,
             defense: 288,
             special: 238,
-            speed: 318,
+            speed: 318
         },
         attacks: [
             "TACKLE",
@@ -1041,7 +1041,7 @@ exports.POKEMON = {
             "RAGE",
             "TAKE DOWN",
             "STRENGTH",
-        ],
+        ]
     },
     GYARADOS: {
         id: "130",
@@ -1052,9 +1052,9 @@ exports.POKEMON = {
             attack: 348,
             defense: 256,
             special: 298,
-            speed: 260,
+            speed: 260
         },
-        attacks: [],
+        attacks: []
     },
     LAPRAS: {
         id: "131",
@@ -1065,9 +1065,9 @@ exports.POKEMON = {
             attack: 268,
             defense: 258,
             special: 288,
-            speed: 218,
+            speed: 218
         },
-        attacks: [],
+        attacks: []
     },
     DITTO: {
         id: "132",
@@ -1078,9 +1078,9 @@ exports.POKEMON = {
             attack: 194,
             defense: 194,
             special: 194,
-            speed: 194,
+            speed: 194
         },
-        attacks: [],
+        attacks: []
     },
     EEVEE: {
         id: "133",
@@ -1091,9 +1091,9 @@ exports.POKEMON = {
             attack: 208,
             defense: 198,
             special: 228,
-            speed: 208,
+            speed: 208
         },
-        attacks: [],
+        attacks: []
     },
     VAPOREON: {
         id: "134",
@@ -1104,9 +1104,9 @@ exports.POKEMON = {
             attack: 228,
             defense: 218,
             special: 318,
-            speed: 228,
+            speed: 228
         },
-        attacks: [],
+        attacks: []
     },
     JOLTEON: {
         id: "135",
@@ -1117,9 +1117,9 @@ exports.POKEMON = {
             attack: 228,
             defense: 218,
             special: 318,
-            speed: 358,
+            speed: 358
         },
-        attacks: [],
+        attacks: []
     },
     FLAREON: {
         id: "136",
@@ -1130,9 +1130,9 @@ exports.POKEMON = {
             attack: 358,
             defense: 218,
             special: 318,
-            speed: 228,
+            speed: 228
         },
-        attacks: [],
+        attacks: []
     },
     PORYGON: {
         id: "137",
@@ -1143,9 +1143,9 @@ exports.POKEMON = {
             attack: 218,
             defense: 238,
             special: 248,
-            speed: 178,
+            speed: 178
         },
-        attacks: [],
+        attacks: []
     },
     OMASTAR: {
         id: "139",
@@ -1156,9 +1156,9 @@ exports.POKEMON = {
             attack: 218,
             defense: 348,
             special: 328,
-            speed: 208,
+            speed: 208
         },
-        attacks: [],
+        attacks: []
     },
     KABUTOPS: {
         id: "140",
@@ -1169,9 +1169,9 @@ exports.POKEMON = {
             attack: 328,
             defense: 308,
             special: 238,
-            speed: 258,
+            speed: 258
         },
-        attacks: [],
+        attacks: []
     },
     AERODACTYL: {
         id: "142",
@@ -1182,9 +1182,9 @@ exports.POKEMON = {
             attack: 308,
             defense: 228,
             special: 218,
-            speed: 358,
+            speed: 358
         },
-        attacks: [],
+        attacks: []
     },
     SNORLAX: {
         id: "143",
@@ -1195,9 +1195,9 @@ exports.POKEMON = {
             attack: 318,
             defense: 228,
             special: 228,
-            speed: 158,
+            speed: 158
         },
-        attacks: [],
+        attacks: []
     },
     ARTICUNO: {
         id: "144",
@@ -1208,9 +1208,9 @@ exports.POKEMON = {
             attack: 268,
             defense: 298,
             special: 348,
-            speed: 268,
+            speed: 268
         },
-        attacks: [],
+        attacks: []
     },
     ZAPDOS: {
         id: "145",
@@ -1221,9 +1221,9 @@ exports.POKEMON = {
             attack: 278,
             defense: 268,
             special: 348,
-            speed: 298,
+            speed: 298
         },
-        attacks: [],
+        attacks: []
     },
     MOLTRES: {
         id: "146",
@@ -1234,9 +1234,9 @@ exports.POKEMON = {
             attack: 298,
             defense: 278,
             special: 348,
-            speed: 278,
+            speed: 278
         },
-        attacks: [],
+        attacks: []
     },
     DRAGONITE: {
         id: "149",
@@ -1247,9 +1247,9 @@ exports.POKEMON = {
             attack: 366,
             defense: 288,
             special: 298,
-            speed: 258,
+            speed: 258
         },
-        attacks: [],
+        attacks: []
     },
     MEWTWO: {
         id: "150",
@@ -1260,9 +1260,9 @@ exports.POKEMON = {
             attack: 318,
             defense: 278,
             special: 406,
-            speed: 358,
+            speed: 358
         },
-        attacks: [],
+        attacks: []
     },
     MEW: {
         id: "151",
@@ -1273,10 +1273,10 @@ exports.POKEMON = {
             attack: 298,
             defense: 298,
             special: 298,
-            speed: 298,
+            speed: 298
         },
-        attacks: [],
-    },
+        attacks: []
+    }
 };
 // NAME: {
 //   id: 1,

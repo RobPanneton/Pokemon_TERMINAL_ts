@@ -48,5 +48,15 @@ export class Battle {
       this.currentPokemon.npcPokemon,
       npcMove
     );
+
+    this.checkIfWinner();
+  }
+
+  // FIX THIS
+  checkIfWinner() {
+    this.isFinished =
+      Object.keys(currentPokemon.playerPokemon).every(
+        (e, i) => e[i].hp === 0
+      ) || Object.keys(npcPokemon.playerPokemon).every((e, i) => e[i].hp === 0);
   }
 }

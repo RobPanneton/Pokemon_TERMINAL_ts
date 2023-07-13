@@ -29,5 +29,5 @@ export const calcTypeMultiplier = (atkType, monType): number => {
 };
 
 export const handleDamage = (hp, damage) => {
-  return hp - damage > 0 ? hp - damage : 0;
+  return hp - damage >= 0 ? hp - damage : 0;
 };

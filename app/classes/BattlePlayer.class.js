@@ -1,25 +1,39 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+exports.__esModule = true;
 exports.BattlePlayer = void 0;
-const attacks_1 = require("../stats/attacks");
-class BattlePlayer {
-    constructor(name, type, team) {
+var attacks_1 = require("../stats/attacks");
+var BattlePlayer = /** @class */ (function () {
+    function BattlePlayer(name, type, team) {
         this.name = name;
         this.type = type;
         this.team = this.initTeam(team);
     }
-    initTeam(team) {
-        return Object.keys(team).reduce((acc, slot) => {
-            return Object.assign(Object.assign({}, acc), { [slot]: Object.assign(Object.assign({}, team[slot]), { health: {
-                        hp: team[slot].stats.hp,
-                        maxHp: team[slot].stats.hp,
-                    }, level: 100, fainted: false, attacks: this.mapAttacks(team[slot].attacks) }) });
+    BattlePlayer.prototype.initTeam = function (team) {
+        var _this = this;
+        return Object.keys(team).reduce(function (acc, slot) {
+            var _a;
+            return __assign(__assign({}, acc), (_a = {}, _a[slot] = __assign(__assign({}, team[slot]), { health: {
+                    hp: team[slot].stats.hp,
+                    maxHp: team[slot].stats.hp
+                }, level: 100, fainted: false, attacks: _this.mapAttacks(team[slot].attacks) }), _a));
         }, {});
-    }
-    mapAttacks(monAttacks) {
-        return monAttacks.map((mAtk) => {
+    };
+    BattlePlayer.prototype.mapAttacks = function (monAttacks) {
+        return monAttacks.map(function (mAtk) {
             return attacks_1.attacks[mAtk];
         });
-    }
-}
+    };
+    return BattlePlayer;
+}());
 exports.BattlePlayer = BattlePlayer;

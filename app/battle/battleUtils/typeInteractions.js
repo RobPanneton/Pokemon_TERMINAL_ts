@@ -1,72 +1,72 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.typeInteractions = void 0;
 exports.typeInteractions = {
     NORMAL: { superEffective: [], resistant: ["ROCK"], immune: ["GHOST"] },
     FIGHTING: {
         superEffective: ["NORMAL", "ROCK", "ICE"],
         resistant: ["FLYING", "POISON", "BUG", "PSYCHIC"],
-        immune: ["GHOST"],
+        immune: ["GHOST"]
     },
     FLYING: {
         superEffective: ["FIGHTING", "BUG", "GRASS"],
         resistant: ["ROCK", "ELECTRIC"],
-        immune: [],
+        immune: []
     },
     POISON: {
         superEffective: ["BUG", "GRASS"],
         resistant: ["POISON", "GROUND", "ROCK", "GHOST"],
-        immune: [],
+        immune: []
     },
     GROUND: {
         superEffective: ["POISON", "GROUND", "ELECTRIC", "FIRE"],
         resistant: ["BUG", "GRASS"],
-        immune: ["FLYING"],
+        immune: ["FLYING"]
     },
     ROCK: {
         superEffective: ["FLYING", "BUG", "FIRE", "ICE"],
         resistant: ["FIGHTING", "GROUND"],
-        immune: [],
+        immune: []
     },
     BUG: {
         superEffective: ["POISON", "GRASS", "PSYCHIC"],
         resistant: ["FIGHTING", "FLYING", "GHOST", "FIRE"],
-        immune: [],
+        immune: []
     },
     GHOST: {
         superEffective: ["GHOST"],
         resistant: [],
-        immune: ["NORMAL", "PSYCHIC"],
+        immune: ["NORMAL", "PSYCHIC"]
     },
     FIRE: {
         superEffective: ["BUG", "GRASS", "ICE"],
         resistant: ["ROCK", "FIRE", "WATER", "DRAGON"],
-        immune: [],
+        immune: []
     },
     WATER: {
         superEffective: ["GROUND", "ROCK", "FIRE"],
         resistant: ["WATER", "GRASS", "DRAGON"],
-        immune: [],
+        immune: []
     },
     GRASS: {
         superEffective: ["GROUND", "ROCK", "WATER"],
         resistant: ["FLYING", "POISON", "BUG", "FIRE", "GRASS", "DRAGON"],
-        immune: [],
+        immune: []
     },
     ELECTRIC: {
         superEffective: ["FLYING", "WATER"],
         resistant: ["GRASS", "ELECTRIC", "DRAGON"],
-        immune: ["GROUND"],
+        immune: ["GROUND"]
     },
     PSYCHIC: {
         superEffective: ["FIGHTING", "POISON"],
         resistant: ["PSYCHIC"],
-        immune: [],
+        immune: []
     },
     ICE: {
         superEffective: ["FLYING", "GROUND", "GRASS", "DRAGON"],
-        resistant: ["FIRE", "ICE"],
-        immune: [],
+        resistant: ["ICE"],
+        immune: []
     },
-    DRAGON: { superEffective: ["DRAGON"], resistant: [], immune: [] },
+    DRAGON: { superEffective: ["DRAGON"], resistant: [], immune: [] }
 };

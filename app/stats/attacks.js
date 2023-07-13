@@ -16,7 +16,7 @@
 // HAZE
 // HI JUMP KICK and JUMP KICK
 // HYPER BEAM
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.attacks = void 0;
 // HIGH CRIT RATIO MOVES: CRABHAMMER, KARATE CHOP, SLASH
 // TO BE TESTED:                              ~~~~~~~ TEST TO DOS ~~~~~~~
@@ -43,9 +43,8 @@ exports.attacks = {
         type: "GRASS",
         effect: {
             chance: 100,
-            drain: 50,
-            // if damage is 1, heals 1, does not heal from substitute dmg
-        },
+            drain: 50
+        }
     },
     ACID: {
         name: "ACID",
@@ -55,9 +54,9 @@ exports.attacks = {
         effect: {
             chance: (85 / 256) * 100,
             enemyStatChange: {
-                defense: -1,
-            },
-        },
+                defense: -1
+            }
+        }
     },
     ACIDARMOR: {
         name: "ACID ARMOR",
@@ -67,9 +66,9 @@ exports.attacks = {
         effect: {
             chance: 100,
             selfStatChange: {
-                defense: 2,
-            },
-        },
+                defense: 2
+            }
+        }
     },
     AGILITY: {
         name: "AGILITY",
@@ -79,9 +78,9 @@ exports.attacks = {
         effect: {
             chance: 100,
             selfStatChange: {
-                speed: 2,
-            },
-        },
+                speed: 2
+            }
+        }
     },
     AMNESIA: {
         name: "AMNESIA",
@@ -91,9 +90,9 @@ exports.attacks = {
         effect: {
             chance: 100,
             selfStatChange: {
-                special: 2,
-            },
-        },
+                special: 2
+            }
+        }
     },
     AURORABEAM: {
         name: "AURORA BEAM",
@@ -103,9 +102,9 @@ exports.attacks = {
         effect: {
             chance: (85 / 256) * 100,
             enemyStatChange: {
-                attack: -1,
-            },
-        },
+                attack: -1
+            }
+        }
     },
     BARRAGE: {
         name: "BARRAGE",
@@ -118,10 +117,9 @@ exports.attacks = {
                 2: 37.5,
                 3: 75,
                 4: 87.5,
-                5: 100,
-                // use rng and whatever is highest and <= is the result
-            },
-        },
+                5: 100
+            }
+        }
     },
     BARRIER: {
         name: "BARRIER",
@@ -131,17 +129,15 @@ exports.attacks = {
         effect: {
             chance: 100,
             selfStatChange: {
-                defense: 2,
-            },
-        },
+                defense: 2
+            }
+        }
     },
     BIDE: {
-        name: "BIDE",
-        //TODO
+        name: "BIDE"
     },
     BIND: {
-        name: "BIND",
-        //TOOD
+        name: "BIND"
     },
     BITE: {
         name: "BITE",
@@ -150,8 +146,8 @@ exports.attacks = {
         type: "NORMAL",
         effect: {
             chance: 10,
-            volatileStatus: "flinch",
-        },
+            volatileStatus: "flinch"
+        }
     },
     BLIZZARD: {
         name: "BLIZZARD",
@@ -160,8 +156,8 @@ exports.attacks = {
         type: "ICE",
         effect: {
             chance: 10,
-            status: "freeze",
-        },
+            status: "freeze"
+        }
     },
     BODYSLAM: {
         name: "BODY SLAM",
@@ -169,9 +165,8 @@ exports.attacks = {
         accuracy: 100,
         effect: {
             chance: 30,
-            status: "paralyze",
-            // cannot paralyze normal types??
-        },
+            status: "paralyze"
+        }
     },
     BONECLUB: {
         name: "BONE CLUB",
@@ -180,8 +175,8 @@ exports.attacks = {
         type: "GROUND",
         effect: {
             chance: 10,
-            volatileStatus: "flinch",
-        },
+            volatileStatus: "flinch"
+        }
     },
     BONEMERANG: {
         name: "BONEMERANG",
@@ -191,9 +186,9 @@ exports.attacks = {
         effect: {
             chance: 100,
             multihit: {
-                2: 100,
-            },
-        },
+                2: 100
+            }
+        }
     },
     BUBBLE: {
         name: "BUBBLE",
@@ -203,9 +198,9 @@ exports.attacks = {
         effect: {
             chance: (85 / 256) * 100,
             enemyStatChange: {
-                speed: -1,
-            },
-        },
+                speed: -1
+            }
+        }
     },
     BUBBLEBEAM: {
         name: "BUBBLEBEAM",
@@ -215,13 +210,12 @@ exports.attacks = {
         effect: {
             chance: (85 / 256) * 100,
             enemyStatChange: {
-                speed: -1,
-            },
-        },
+                speed: -1
+            }
+        }
     },
     CLAMP: {
-        name: "CLAMP",
-        //TODO
+        name: "CLAMP"
     },
     COMETPUNCH: {
         name: "COMET PUNCH",
@@ -234,10 +228,9 @@ exports.attacks = {
                 2: 37.5,
                 3: 75,
                 4: 87.5,
-                5: 100,
-                // use rng and whatever is highest and <= is the result
-            },
-        },
+                5: 100
+            }
+        }
     },
     CONFUSERAY: {
         name: "CONFUSE RAY",
@@ -246,8 +239,8 @@ exports.attacks = {
         type: "GHOST",
         effect: {
             chance: 100,
-            volatileStatus: "confusion",
-        },
+            volatileStatus: "confusion"
+        }
     },
     CONFUSION: {
         name: "CONFUSION",
@@ -256,8 +249,8 @@ exports.attacks = {
         type: "PSYCHIC",
         effect: {
             chance: 10,
-            volatileStatus: "confusion",
-        },
+            volatileStatus: "confusion"
+        }
     },
     CONSTRICT: {
         name: "CONSTRICT",
@@ -267,17 +260,15 @@ exports.attacks = {
         effect: {
             chance: (85 / 256) * 100,
             enemyStatChange: {
-                speed: -1,
-            },
-        },
+                speed: -1
+            }
+        }
     },
     CONVERSION: {
-        name: "CONVERSION",
-        //TODO
+        name: "CONVERSION"
     },
     COUNTER: {
-        name: "COUNTER",
-        //TOOD
+        name: "COUNTER"
     },
     CRABHAMMER: {
         name: "CRABHAMMER",
@@ -285,13 +276,13 @@ exports.attacks = {
         accuracy: 85,
         effect: {
         // high crit ratio
-        },
+        }
     },
     CUT: {
         name: "CUT",
         power: 50,
         accuracy: 95,
-        type: "NORMAL",
+        type: "NORMAL"
     },
     DEFENSECURL: {
         name: "DEFENSE CURL",
@@ -301,17 +292,15 @@ exports.attacks = {
         effect: {
             chance: 100,
             selfStatChange: {
-                defense: 1,
-            },
-        },
+                defense: 1
+            }
+        }
     },
     DIG: {
-        name: "DIG",
-        // TOOD
+        name: "DIG"
     },
     DISABLE: {
-        name: "DISABLE",
-        // TODO
+        name: "DISABLE"
     },
     DIZZYPUNCH: {
         name: "DIZZY PUNCH",
@@ -320,8 +309,8 @@ exports.attacks = {
         type: "NORMAL",
         effect: {
             chance: 20,
-            volatileStatus: "confuse",
-        },
+            volatileStatus: "confuse"
+        }
     },
     DOUBLEKICK: {
         name: "DOUBLE KICK",
@@ -331,9 +320,9 @@ exports.attacks = {
         effect: {
             chance: 100,
             multihit: {
-                2: 100,
-            },
-        },
+                2: 100
+            }
+        }
     },
     DOUBLESLAP: {
         name: "DOUBLESLAP",
@@ -346,13 +335,12 @@ exports.attacks = {
                 2: 37.5,
                 3: 75,
                 4: 87.5,
-                5: 100,
-            },
-        },
+                5: 100
+            }
+        }
     },
     DOUBLETEAM: {
-        name: "DOUBLE TEAM",
-        // TO DO?? add or no?
+        name: "DOUBLE TEAM"
     },
     DOUBLEEDGE: {
         name: "DOUBLE-EDGE",
@@ -361,10 +349,8 @@ exports.attacks = {
         type: "NORMAL",
         effect: {
             chance: 100,
-            recoil: 25,
-            // RECOIL DOES NOT TAKE EFFECT IF MOVE DESTROYS SUBSTITUTE,
-            // ALSO, DMG CAN BE USED FOR "COUNTER" ???
-        },
+            recoil: 25
+        }
     },
     DRAGONRAGE: {
         name: "DRAGON RAGE",
@@ -373,46 +359,38 @@ exports.attacks = {
         type: "DRAGON",
         effect: {
             chance: 100,
-            damage: 40,
-        },
+            damage: 40
+        }
     },
     DREAMEATER: {
-        name: "DREAM EATER",
-        // TODO
+        name: "DREAM EATER"
     },
     DRILLPECK: {
         name: "DRILL PECK",
         power: 80,
         accuracy: 100,
-        type: "FLYING",
+        type: "FLYING"
     },
     EARTHQUAKE: {
         name: "EARTHQUAKE",
         power: 100,
         accuracy: 100,
-        type: "GROUND",
+        type: "GROUND"
     },
     EGGBOMB: {
         name: "EGG BOMB",
         power: 100,
         accuracy: 75,
-        type: "NORMAL",
+        type: "NORMAL"
     },
     EMBER: {
         name: "EMBER",
         power: 40,
         accuracy: 100,
-        type: "FIRE",
+        type: "FIRE"
     },
     EXPLOSION: {
-        name: "EXPLOSION",
-        // TO DO
-        // this is a tricky one
-        // explosion does not faint user if a substitute is out -- **ONLY IN STADIUM 1 DOES IT FAINT... STILL GEN 1**
-        // explosion damage calc takes enemy def down 1 stage during damage calc
-        // you can either re-work around this, or make base power 340 instead of 170..
-        // however 340 might not be accurate if the enemy's def was already reduced 1 stage as
-        // the def isn't halved anymore
+        name: "EXPLOSION"
     },
     FIREBLAST: {
         name: "FIRE BLAST",
@@ -421,8 +399,8 @@ exports.attacks = {
         type: "FIRE",
         effect: {
             chance: 30,
-            status: "burn",
-        },
+            status: "burn"
+        }
     },
     FIREPUNCH: {
         name: "FIRE PUNCH",
@@ -431,19 +409,17 @@ exports.attacks = {
         type: "FIRE",
         effect: {
             chance: 10,
-            status: "burn",
-        },
+            status: "burn"
+        }
     },
     FIRESPIN: {
-        name: "FIRE SPIN",
-        // TODO
+        name: "FIRE SPIN"
     },
     FISSURE: {
         name: "FISSURE",
         power: 0,
         accuracy: 30,
-        type: "GROUND",
-        //TO DO
+        type: "GROUND"
     },
     FLAMETHROWER: {
         name: "FLAMETHROWER",
@@ -452,20 +428,17 @@ exports.attacks = {
         type: "FIRE",
         effect: {
             chance: 10,
-            status: "burn",
-        },
+            status: "burn"
+        }
     },
     FLASH: {
-        name: "FLASH",
-        // TO DO.. to add or not to add
+        name: "FLASH"
     },
     FLY: {
-        name: "FLY",
-        // TODO
+        name: "FLY"
     },
     FOCUSENERGY: {
-        name: "FOCUS ENERGY",
-        // TO DO?
+        name: "FOCUS ENERGY"
     },
     FURYATTACK: {
         name: "FURY ATTACK",
@@ -478,10 +451,9 @@ exports.attacks = {
                 2: 37.5,
                 3: 75,
                 4: 87.5,
-                5: 100,
-                // use rng and whatever is highest and <= is the result
-            },
-        },
+                5: 100
+            }
+        }
     },
     FURYSWIPES: {
         name: "FURY SWIPES",
@@ -494,10 +466,9 @@ exports.attacks = {
                 2: 37.5,
                 3: 75,
                 4: 87.5,
-                5: 100,
-                // use rng and whatever is highest and <= is the result
-            },
-        },
+                5: 100
+            }
+        }
     },
     GLARE: {
         name: "GLARE",
@@ -506,8 +477,8 @@ exports.attacks = {
         type: "NORMAL",
         effect: {
             chance: 100,
-            status: "paralyze",
-        },
+            status: "paralyze"
+        }
     },
     GROWL: {
         name: "GROWL",
@@ -517,9 +488,9 @@ exports.attacks = {
         effect: {
             chance: 100,
             enemyStatChange: {
-                attack: -1,
-            },
-        },
+                attack: -1
+            }
+        }
     },
     GROWTH: {
         name: "GROWTH",
@@ -529,19 +500,18 @@ exports.attacks = {
         effect: {
             chance: 100,
             selfStatChange: {
-                special: 1,
-            },
-        },
+                special: 1
+            }
+        }
     },
     GUILLOTINE: {
-        name: "GUILLOTINE",
-        // TODO
+        name: "GUILLOTINE"
     },
     GUST: {
         name: "GUST",
         power: 40,
         accuracy: 100,
-        type: "NORMAL",
+        type: "NORMAL"
     },
     HARDEN: {
         name: "HARDEN",
@@ -551,13 +521,12 @@ exports.attacks = {
         effect: {
             chance: 100,
             selfStatChange: {
-                defense: 1,
-            },
-        },
+                defense: 1
+            }
+        }
     },
     HAZE: {
-        name: "HAZE",
-        // TO DO : reset all stat changes
+        name: "HAZE"
     },
     HEADBUTT: {
         name: "HEADBUTT",
@@ -566,31 +535,29 @@ exports.attacks = {
         type: "NORMAL",
         effect: {
             chance: 30,
-            volatileStatus: "flinch",
-        },
+            volatileStatus: "flinch"
+        }
     },
     HIGHJUMPKICK: {
         name: "HI JUMP KICK",
         power: 85,
         accuracy: 90,
-        type: "FIGHTING",
-        // TO DO
+        type: "FIGHTING"
     },
     HORNATTACK: {
         name: "HORN ATTACK",
         power: 65,
         accuracy: 100,
-        type: "NORMAL",
+        type: "NORMAL"
     },
     HORNDRILL: {
-        name: "HORN DRILL",
-        // TO DO
+        name: "HORN DRILL"
     },
     HYDROPUMP: {
         name: "HYDRO PUMP",
         power: 120,
         accuracy: 80,
-        type: "WATER",
+        type: "WATER"
     },
     HYPERFANG: {
         name: "HYPER FANG",
@@ -599,8 +566,8 @@ exports.attacks = {
         type: "NORMAL",
         effect: {
             chance: 10,
-            volatileStatus: "flinch",
-        },
+            volatileStatus: "flinch"
+        }
     },
     HYPNOSIS: {
         name: "HYPNOSIS",
@@ -609,8 +576,8 @@ exports.attacks = {
         type: "PSYCHIC",
         effect: {
             chance: 100,
-            status: "sleep",
-        },
+            status: "sleep"
+        }
     },
     HYPERBEAM: {
         name: "HYPER BEAM",
@@ -618,9 +585,8 @@ exports.attacks = {
         accuracy: 90,
         type: "NORMAL",
         effect: {
-            chance: 100,
-            // TO DO (selfVolatileStatus : recharge)?
-        },
+            chance: 100
+        }
     },
     ICEBEAM: {
         name: "ICE BEAM",
@@ -629,8 +595,8 @@ exports.attacks = {
         type: "ICE",
         effect: {
             chance: 10,
-            status: "freeze",
-        },
+            status: "freeze"
+        }
     },
     ICEPUNCH: {
         name: "ICE PUNCH",
@@ -639,20 +605,17 @@ exports.attacks = {
         type: "ICE",
         effect: {
             chance: 10,
-            status: "freeze",
-        },
+            status: "freeze"
+        }
     },
     JUMPKICK: {
-        name: "JUMP KICK",
-        // TO DO
+        name: "JUMP KICK"
     },
     KARATECHOP: {
-        name: "KARATE CHOP",
-        // TO DO
+        name: "KARATE CHOP"
     },
     KINESIS: {
-        name: "KINESIS",
-        // TO DO
+        name: "KINESIS"
     },
     LEECHLIFE: {
         name: "LEECH LIFE",
@@ -661,8 +624,8 @@ exports.attacks = {
         type: "BUG",
         effect: {
             chance: 100,
-            drain: 50,
-        },
+            drain: 50
+        }
     },
     STOMP: {
         name: "STOMP",
@@ -671,26 +634,26 @@ exports.attacks = {
         type: "NORMAL",
         effect: {
             chance: 33,
-            flinch: true,
-        },
+            flinch: true
+        }
     },
     SURF: {
         name: "SURF",
         power: 95,
         accuracy: 100,
-        type: "WATER",
+        type: "WATER"
     },
     STRENGTH: {
         name: "STRENGTH",
         power: 80,
         accuracy: 100,
-        type: "NORMAL",
+        type: "NORMAL"
     },
     TACKLE: {
         name: "TACKLE",
         power: 35,
         accuracy: 95,
-        type: "NORMAL",
+        type: "NORMAL"
     },
     THUNDERBOLT: {
         name: "THUNDERBOLT",
@@ -699,21 +662,21 @@ exports.attacks = {
         type: "ELECTRIC",
         effect: {
             chance: 10,
-            effect: "PARALYZE",
-        },
+            effect: "PARALYZE"
+        }
     },
     VINEWHIP: {
         name: "VINE WHIP",
         power: 35,
         accuracy: 100,
-        type: "GRASS",
+        type: "GRASS"
     },
     WINGATTACK: {
         name: "WING ATTACK",
         power: 35,
         accuracy: 100,
-        type: "FLYING",
-    },
+        type: "FLYING"
+    }
 };
 // logic for attack effects
 // effect %
@@ -724,7 +687,7 @@ exports.attacks = {
 // buff (increase pokemon's stats while keeping in mind damage cap)
 // curse (decrease opponent's stats
 // for buffs and curses, modify stats as you would hp and return the new values in object that battle() returns
-const attackExample = {
+var attackExample = {
     name: "name",
     power: "att",
     accuracy: "acc",
@@ -734,7 +697,7 @@ const attackExample = {
             burn: true,
             paralyze: true,
             freeze: true,
-            sleep: true,
+            sleep: true
         },
         confused: true,
         flinch: true,
@@ -744,40 +707,7 @@ const attackExample = {
         ohko: true,
         multpy: "rng with parameters",
         conversion: {
-            type: "NORMAL",
-        },
-        // counter: true,
-        // critBonus: true,
-        // disable: true,
-        // recoil: true,
-        // setDamage: "pokemon.level",
-        // sleepCondition: "forDreamEater",
-        // digCondition: "forEarthquake",
-        // selfKill: true,
-        // statReset: "haze",
-        // missDamage: "high jump kick",
-        // metronome
-        // mirror move
-        // mimic
-        // mist
-        // pay day ??
-        // frenzy + confusion === petal dance
-        // psywave
-        // rage ( raise user's attack when hit)
-        // recover - soft-boiled
-        // rest
-        // reflect
-        // light screen
-        // roar: phasing
-        // skull bash
-        // set damage (dragon rage, sonicboom)
-        // ,,, focus energy?? glitched in gen 1 ? what to do..
-        // splash
-        // substitute
-        // super fang
-        // swift when accuracy changes are added
-        // teleport
-        // transform
-    },
-    // try to dynamically code dig, fly, sky attack, etc, charge up and recharge moves
+            type: "NORMAL"
+        }
+    }
 };

@@ -1,8 +1,8 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.whoGoesFirst = void 0;
-const RNG_1 = require("../battleUtils/RNG");
-const whoGoesFirst = (mon1, atk1, mon2, atk2) => {
+var RNG_1 = require("../battleUtils/RNG");
+var whoGoesFirst = function (mon1, atk1, mon2, atk2) {
     if (mon1.stats.speed > mon2.stats.speed)
         return [mon1, atk1, mon2, atk2];
     if (mon1.stats.speed < mon2.stats.speed)
