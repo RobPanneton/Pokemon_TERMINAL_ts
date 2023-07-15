@@ -2,7 +2,7 @@ export type SpeciesStats = {
   [id: string]: PokemonInfo;
 };
 
-type PokemonInfo = {
+export type PokemonInfo = {
   id: string;
   species: string;
   type: {

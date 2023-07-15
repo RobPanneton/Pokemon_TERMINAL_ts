@@ -15,6 +15,7 @@ var Battle = /** @class */ (function () {
         };
         this.logDispatchPokemon(this.player.name, this.currentPokemon.playerPokemon.species);
         this.logDispatchPokemon(this.npc.name, this.currentPokemon.npcPokemon.species);
+        console.log({ player: this.player.team.slot_1.health });
     }
     Battle.prototype.logDispatchPokemon = function (trainerName, pokemonName) {
         console.log("".concat(trainerName, " sent out ").concat(pokemonName, "!"));
@@ -23,6 +24,7 @@ var Battle = /** @class */ (function () {
         var playerMove = (0, attackPrompt_1.attackPrompt)(this.currentPokemon.playerPokemon.attacks);
         var npcMove = (0, getNpcMove_1.getNpcMove)(this.currentPokemon.npcPokemon.attacks);
         (0, battleTurn_1.battleTurn)(this.currentPokemon.playerPokemon, playerMove, this.currentPokemon.npcPokemon, npcMove);
+        // this.checkIfWinner();
     };
     return Battle;
 }());
