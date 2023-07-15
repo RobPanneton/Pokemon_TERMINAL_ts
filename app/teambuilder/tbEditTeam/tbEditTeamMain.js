@@ -1,7 +1,7 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.editTeamMain = void 0;
-const editTeamMain = () => {
+var editTeamMain = function () {
     return console.log("Edit Team Main");
 };
 exports.editTeamMain = editTeamMain;

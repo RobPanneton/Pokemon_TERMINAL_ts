@@ -1,28 +1,31 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.Battle = void 0;
-const attackPrompt_1 = require("../battle/battleMenuPrompts/attackPrompt");
-const battleTurn_1 = require("../battle/battleTurn/battleTurn");
-const getNpcMove_1 = require("../battle/battleUtils/getNpcMove");
-const BattlePlayer_class_1 = require("./BattlePlayer.class");
-class Battle {
-    constructor(playerTeam, playerName, npcTeam, npcName) {
+var attackPrompt_1 = require("../battle/battleMenuPrompts/attackPrompt");
+var battleTurn_1 = require("../battle/battleTurn/battleTurn");
+var getNpcMove_1 = require("../battle/battleUtils/getNpcMove");
+var BattlePlayer_class_1 = require("./BattlePlayer.class");
+var Battle = /** @class */ (function () {
+    function Battle(playerTeam, playerName, npcTeam, npcName) {
         this.player = new BattlePlayer_class_1.BattlePlayer(playerName, "player", playerTeam);
         this.npc = new BattlePlayer_class_1.BattlePlayer(npcName, "npc", npcTeam);
         this.currentPokemon = {
             playerPokemon: this.player.team.slot_1,
-            npcPokemon: this.npc.team.slot_1,
+            npcPokemon: this.npc.team.slot_1
         };
         this.logDispatchPokemon(this.player.name, this.currentPokemon.playerPokemon.species);
         this.logDispatchPokemon(this.npc.name, this.currentPokemon.npcPokemon.species);
+        console.log({ player: this.player.team.slot_1.health });
     }
-    logDispatchPokemon(trainerName, pokemonName) {
-        console.log(`${trainerName} sent out ${pokemonName}!`);
-    }
-    initTurn() {
-        const playerMove = (0, attackPrompt_1.attackPrompt)(this.currentPokemon.playerPokemon.attacks);
-        const npcMove = (0, getNpcMove_1.getNpcMove)(this.currentPokemon.npcPokemon.attacks);
+    Battle.prototype.logDispatchPokemon = function (trainerName, pokemonName) {
+        console.log("".concat(trainerName, " sent out ").concat(pokemonName, "!"));
+    };
+    Battle.prototype.initTurn = function () {
+        var playerMove = (0, attackPrompt_1.attackPrompt)(this.currentPokemon.playerPokemon.attacks);
+        var npcMove = (0, getNpcMove_1.getNpcMove)(this.currentPokemon.npcPokemon.attacks);
         (0, battleTurn_1.battleTurn)(this.currentPokemon.playerPokemon, playerMove, this.currentPokemon.npcPokemon, npcMove);
-    }
-}
+        // this.checkIfWinner();
+    };
+    return Battle;
+}());
 exports.Battle = Battle;

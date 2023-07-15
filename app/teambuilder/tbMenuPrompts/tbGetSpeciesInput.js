@@ -1,11 +1,11 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.tbGetNewSpeciesInput = void 0;
-const prompts_1 = require("../../utils/prompts");
-const validators_1 = require("../../utils/validators");
-const tbGetNewSpeciesInput = (pokemonListString, validInputs) => {
-    console.log(`${pokemonListString}   R) Restart   E) Exit \n`);
-    let userInput = (0, prompts_1.userInputPrompt)("Choose a Pokemon: ");
+var prompts_1 = require("../../utils/prompts");
+var validators_1 = require("../../utils/validators");
+var tbGetNewSpeciesInput = function (pokemonListString, validInputs) {
+    console.log("".concat(pokemonListString, "   R) Restart   E) Exit \n"));
+    var userInput = (0, prompts_1.userInputPrompt)("Choose a Pokemon: ");
     if (userInput.toUpperCase() === "E")
         process.exit();
     if (userInput.toUpperCase() === "R")

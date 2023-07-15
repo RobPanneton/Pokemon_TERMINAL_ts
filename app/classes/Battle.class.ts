@@ -1,18 +1,19 @@
 import { attackPrompt } from "../battle/battleMenuPrompts/attackPrompt";
 import { battleTurn } from "../battle/battleTurn/battleTurn";
 import { getNpcMove } from "../battle/battleUtils/getNpcMove";
+import { BattlePlayerT, BattlePokemonT } from "../types/BattlePlayer.type";
 import { BattlePlayer } from "./BattlePlayer.class";
 
 export class Battle {
-  player: any;
-  npc: any;
+  player: BattlePlayerT;
+  npc: BattlePlayerT;
   winner: string;
   loser: string;
   outcome: string;
   isFinished: boolean;
   currentPokemon: {
-    playerPokemon: any;
-    npcPokemon: any;
+    playerPokemon: BattlePokemonT;
+    npcPokemon: BattlePokemonT;
   };
 
   constructor(playerTeam, playerName, npcTeam, npcName) {
@@ -32,6 +33,8 @@ export class Battle {
       this.npc.name,
       this.currentPokemon.npcPokemon.species
     );
+
+    console.log({ player: this.player.team.slot_1.health });
   }
 
   logDispatchPokemon(trainerName, pokemonName) {
@@ -48,5 +51,18 @@ export class Battle {
       this.currentPokemon.npcPokemon,
       npcMove
     );
+
+    // this.checkIfWinner();
   }
+
+  // FIX THIS
+  // checkIfWinner() {
+  //   this.isFinished =
+  //     Object.keys(this.currentPokemon.playerPokemon).every(
+  //       (e, i) => e[i].hp === 0
+  //     ) ||
+  //     Object.keys(this.currentPokemon.npcPokemon).every(
+  //       (e, i) => e[i].hp === 0
+  //     );
+  // }
 }

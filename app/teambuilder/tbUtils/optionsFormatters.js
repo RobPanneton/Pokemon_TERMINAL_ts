@@ -1,22 +1,31 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+exports.__esModule = true;
 exports.formatSpeciesOptionsString = exports.formatValidSpeciesInputs = void 0;
-const stringFormat_1 = require("../../utils/stringFormat");
-const pokemon_1 = require("../../stats/pokemon");
-const formatValidSpeciesInputs = () => {
-    return Object.keys(pokemon_1.POKEMON).reduce((acc, obj) => {
+var stringFormat_1 = require("../../utils/stringFormat");
+var pokemon_1 = require("../../stats/pokemon");
+var formatValidSpeciesInputs = function () {
+    return Object.keys(pokemon_1.POKEMON).reduce(function (acc, obj) {
         if (pokemon_1.POKEMON[obj].attacks.length === 0)
-            return [...acc];
-        return [...acc, obj, pokemon_1.POKEMON[obj].id, (0, stringFormat_1.removeLeadingZeros)(pokemon_1.POKEMON[obj].id)];
+            return __spreadArray([], acc, true);
+        return __spreadArray(__spreadArray([], acc, true), [obj, pokemon_1.POKEMON[obj].id, (0, stringFormat_1.removeLeadingZeros)(pokemon_1.POKEMON[obj].id)], false);
     }, []);
 };
 exports.formatValidSpeciesInputs = formatValidSpeciesInputs;
-const formatSpeciesOptionsString = () => {
+var formatSpeciesOptionsString = function () {
     return Object.keys(pokemon_1.POKEMON)
-        .map((poke, index) => {
+        .map(function (poke, index) {
         if ((index + 1) % 4 === 0)
-            return `${pokemon_1.POKEMON[poke].id}) ${pokemon_1.POKEMON[poke].species}\n\n`;
-        return `${pokemon_1.POKEMON[poke].id}) ${pokemon_1.POKEMON[poke].species}   `;
+            return "".concat(pokemon_1.POKEMON[poke].id, ") ").concat(pokemon_1.POKEMON[poke].species, "\n\n");
+        return "".concat(pokemon_1.POKEMON[poke].id, ") ").concat(pokemon_1.POKEMON[poke].species, "   ");
     })
         .join("");
 };

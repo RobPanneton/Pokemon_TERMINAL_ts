@@ -1,17 +1,18 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.battleTurn = void 0;
-const initAttack_1 = require("./initAttack");
-const whoGoesFirst_1 = require("./whoGoesFirst");
-const battleTurn = (playerMon, playerAttack, npcMon, npcAttack) => {
+var initAttack_1 = require("./initAttack");
+var whoGoesFirst_1 = require("./whoGoesFirst");
+var battleTurn = function (playerMon, playerAttack, npcMon, npcAttack) {
     // does not acknowledge priority of moves yet
-    let [firstMon, firstAtk, secondMon, secondAtk] = (0, whoGoesFirst_1.whoGoesFirst)(playerMon, playerAttack, npcMon, npcAttack);
+    var _a = (0, whoGoesFirst_1.whoGoesFirst)(playerMon, playerAttack, npcMon, npcAttack), firstMon = _a[0], firstAtk = _a[1], secondMon = _a[2], secondAtk = _a[3];
     // first attack
-    console.log(`\n${firstMon.species} used ${firstAtk.name}!`);
+    console.log("\n".concat(firstMon.species, " used ").concat(firstAtk.name, "!"));
     (0, initAttack_1.initAttack)(firstMon, firstAtk, secondMon);
     // second attack
-    console.log(`\n${secondMon.species} used ${secondAtk.name}!`);
+    console.log("\n".concat(secondMon.species, " used ").concat(secondAtk.name, "!"));
     (0, initAttack_1.initAttack)(secondMon, secondAtk, firstMon);
+    //handle faints -- keep going
     return;
 };
 exports.battleTurn = battleTurn;
