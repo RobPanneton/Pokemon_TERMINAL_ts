@@ -19,5 +19,6 @@ export type BattlePokemonT = PokemonInfo & {
   health: { hp: number; maxHp: number };
   level: number;
   fainted: boolean;
+  slot: string;
   status?: any;
 };

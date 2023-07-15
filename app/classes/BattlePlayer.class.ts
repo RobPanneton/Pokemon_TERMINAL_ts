@@ -12,11 +12,12 @@ export class BattlePlayer {
   }
 
   private initTeam(team) {
-    return Object.keys(team).reduce((acc, slot) => {
+    return Object.keys(team).reduce((acc, slot, index) => {
       return {
         ...acc,
         [slot]: {
           ...team[slot],
+          slot: `slot_${index + 1}`,
           health: {
             hp: team[slot].stats.hp,
             maxHp: team[slot].stats.hp,
