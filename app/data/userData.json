@@ -1,1 +1,172 @@
-{"teams":{"battleTest":{"teamName":"BattleTest","team":{"slot_1":{"id":"slot_1-BLASTOISE","species":"BLASTOISE","type":{"type1":"WATER","type2":null},"stats":{"hp":361,"attack":264,"defense":298,"special":268,"speed":254},"attacks":["SURF","ICEBEAM","STRENGTH","HYDROPUMP"]},"slot_2":{"id":"slot_2-CHARIZARD","species":"CHARIZARD","type":{"type1":"FIRE","type2":"FLYING"},"stats":{"hp":359,"attack":266,"defense":254,"special":268,"speed":298},"attacks":["FLAMETHROWER","STRENGTH","FIREBLAST","EARTHQUAKE"]},"slot_3":{"id":"slot_3-VENUSAUR","species":"VENUSAUR","type":{"type1":"GRASS","type2":"POISON"},"stats":{"hp":263,"attack":262,"defense":264,"special":298,"speed":258},"attacks":["TACKLE","GROWL","EARTHQUAKE","VINEWHIP"]},"slot_4":{"id":"slot_4-NIDOKING","species":"NIDOKING","type":{"type1":"POISON","type2":"GROUND"},"stats":{"hp":365,"attack":282,"defense":252,"special":248,"speed":250},"attacks":["EARTHQUAKE","FIREBLAST","ICEBEAM","THUNDER"]},"slot_5":{"id":"slot_5-RAICHU","species":"RAICHU","type":{"type1":"ELECTRIC","type2":null},"stats":{"hp":323,"attack":278,"defense":208,"special":278,"speed":298},"attacks":["THUNDER","TACKLE","GROWL","THUNDERBOLT"]},"slot_6":{"id":"slot_6-PIDGEOT","species":"PIDGEOT","type":{"type1":"NORMAL","type2":"FLYING"},"stats":{"hp":369,"attack":258,"defense":248,"special":238,"speed":280},"attacks":["WINGATTACK","TACKLE","TACKLE","GUST"]}}},"wedasz":{"teamName":"wedasz","team":{}},"testTeam1":{"teamName":"testTeam1","team":{"slot_1":{"id":"slot_1-BLASTOISE","species":"BLASTOISE","type":{"type1":"WATER","type2":null},"stats":{"hp":361,"attack":264,"defense":298,"special":268,"speed":254},"attacks":["SURF","HYDROPUMP","STRENGTH","SKULLBASH"]},"slot_2":{"id":"slot_2-CHARIZARD","species":"CHARIZARD","type":{"type1":"FIRE","type2":"FLYING"},"stats":{"hp":359,"attack":266,"defense":254,"special":268,"speed":298},"attacks":["FLAMETHROWER","SCRATCH","GROWL","EMBER"]},"slot_3":{"id":"slot_3-VENUSAUR","species":"VENUSAUR","type":{"type1":"GRASS","type2":"POISON"},"stats":{"hp":263,"attack":262,"defense":264,"special":298,"speed":258},"attacks":["VINEWHIP","TACKLE","GROWL","LEECHSEED"]},"slot_4":{"id":"slot_4-VENUSAUR","species":"VENUSAUR","type":{"type1":"GRASS","type2":"POISON"},"stats":{"hp":263,"attack":262,"defense":264,"special":298,"speed":258},"attacks":["TACKLE","GROWL","LEECHSEED","VINEWHIP"]},"slot_5":{"id":"slot_5-VENUSAUR","species":"VENUSAUR","type":{"type1":"GRASS","type2":"POISON"},"stats":{"hp":263,"attack":262,"defense":264,"special":298,"speed":258},"attacks":["TACKLE","GROWL","LEECHSEED","VINEWHIP"]},"slot_6":{"id":"slot_6-VENUSAUR","species":"VENUSAUR","type":{"type1":"GRASS","type2":"POISON"},"stats":{"hp":263,"attack":262,"defense":264,"special":298,"speed":258},"attacks":["TACKLE","GROWL","LEECHSEED","VINEWHIP"]}}}},"playerName":"Rob-Test-Player"}
+{
+  "teams": {
+    "battleTest": {
+      "teamName": "BattleTest",
+      "team": {
+        "slot_1": {
+          "id": "slot_1-BLASTOISE",
+          "species": "BLASTOISE",
+          "type": { "type1": "WATER", "type2": null },
+          "stats": {
+            "hp": 361,
+            "attack": 264,
+            "defense": 298,
+            "special": 268,
+            "speed": 254
+          },
+          "attacks": ["SURF", "ICEBEAM", "STRENGTH", "HYDROPUMP"]
+        },
+        "slot_2": {
+          "id": "slot_2-CHARIZARD",
+          "species": "CHARIZARD",
+          "type": { "type1": "FIRE", "type2": "FLYING" },
+          "stats": {
+            "hp": 359,
+            "attack": 266,
+            "defense": 254,
+            "special": 268,
+            "speed": 298
+          },
+          "attacks": ["FLAMETHROWER", "STRENGTH", "FIREBLAST", "EARTHQUAKE"]
+        },
+        "slot_3": {
+          "id": "slot_3-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "EARTHQUAKE", "VINEWHIP"]
+        },
+        "slot_4": {
+          "id": "slot_4-NIDOKING",
+          "species": "NIDOKING",
+          "type": { "type1": "POISON", "type2": "GROUND" },
+          "stats": {
+            "hp": 365,
+            "attack": 282,
+            "defense": 252,
+            "special": 248,
+            "speed": 250
+          },
+          "attacks": ["EARTHQUAKE", "FIREBLAST", "ICEBEAM", "THUNDER"]
+        },
+        "slot_5": {
+          "id": "slot_5-RAICHU",
+          "species": "RAICHU",
+          "type": { "type1": "ELECTRIC", "type2": null },
+          "stats": {
+            "hp": 323,
+            "attack": 278,
+            "defense": 208,
+            "special": 278,
+            "speed": 298
+          },
+          "attacks": ["THUNDER", "TACKLE", "GROWL", "THUNDERBOLT"]
+        },
+        "slot_6": {
+          "id": "slot_6-PIDGEOT",
+          "species": "PIDGEOT",
+          "type": { "type1": "NORMAL", "type2": "FLYING" },
+          "stats": {
+            "hp": 369,
+            "attack": 258,
+            "defense": 248,
+            "special": 238,
+            "speed": 280
+          },
+          "attacks": ["WINGATTACK", "TACKLE", "TACKLE", "GUST"]
+        }
+      }
+    },
+    "wedasz": { "teamName": "wedasz", "team": {} },
+    "testTeam1": {
+      "teamName": "testTeam1",
+      "team": {
+        "slot_1": {
+          "id": "slot_1-BLASTOISE",
+          "species": "BLASTOISE",
+          "type": { "type1": "WATER", "type2": null },
+          "stats": {
+            "hp": 361,
+            "attack": 264,
+            "defense": 298,
+            "special": 268,
+            "speed": 254
+          },
+          "attacks": ["SURF", "HYDROPUMP", "STRENGTH", "SKULLBASH"]
+        },
+        "slot_2": {
+          "id": "slot_2-CHARIZARD",
+          "species": "CHARIZARD",
+          "type": { "type1": "FIRE", "type2": "FLYING" },
+          "stats": {
+            "hp": 359,
+            "attack": 266,
+            "defense": 254,
+            "special": 268,
+            "speed": 298
+          },
+          "attacks": ["FLAMETHROWER", "SCRATCH", "GROWL", "EMBER"]
+        },
+        "slot_3": {
+          "id": "slot_3-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["VINEWHIP", "TACKLE", "GROWL", "LEECHSEED"]
+        },
+        "slot_4": {
+          "id": "slot_4-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECHSEED", "VINEWHIP"]
+        },
+        "slot_5": {
+          "id": "slot_5-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECHSEED", "VINEWHIP"]
+        },
+        "slot_6": {
+          "id": "slot_6-VENUSAUR",
+          "species": "VENUSAUR",
+          "type": { "type1": "GRASS", "type2": "POISON" },
+          "stats": {
+            "hp": 263,
+            "attack": 262,
+            "defense": 264,
+            "special": 298,
+            "speed": 258
+          },
+          "attacks": ["TACKLE", "GROWL", "LEECHSEED", "VINEWHIP"]
+        }
+      }
+    }
+  },
+  "playerName": "Rob-Test-Player"
+}

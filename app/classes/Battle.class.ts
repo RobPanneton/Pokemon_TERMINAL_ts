@@ -1,5 +1,5 @@
 import { attackPrompt } from "../battle/battleMenuPrompts/attackPrompt";
-import { battleTurn } from "../battle/battleTurn/battleTurn";
+import { battlePhase } from "../battle/battleTurn/battleTurn";
 import { getNpcMove } from "../battle/battleUtils/getNpcMove";
 import { BattlePlayerT, BattlePokemonT } from "../types/BattlePlayer.type";
 import { BattlePlayer } from "./BattlePlayer.class";
@@ -33,8 +33,6 @@ export class Battle {
       this.npc.name,
       this.currentPokemon.npcPokemon.species
     );
-
-    console.log({ player: this.player.team.slot_1.health });
   }
 
   logDispatchPokemon(trainerName, pokemonName) {
@@ -42,15 +40,31 @@ export class Battle {
   }
 
   initTurn() {
-    const playerMove = attackPrompt(this.currentPokemon.playerPokemon.attacks);
-    const npcMove = getNpcMove(this.currentPokemon.npcPokemon.attacks);
+    const playerMon = this.currentPokemon.playerPokemon;
+    const npcMon = this.currentPokemon.npcPokemon;
 
-    battleTurn(
-      this.currentPokemon.playerPokemon,
-      playerMove,
-      this.currentPokemon.npcPokemon,
-      npcMove
-    );
+    const playerMove = attackPrompt(playerMon.attacks);
+    const npcMove = getNpcMove(npcMon.attacks);
+
+    battlePhase(playerMon, playerMove, npcMon, npcMove);
+
+    if (playerMon.health.hp === 0 || npcMon.health.hp === 0) {
+      if (playerMon.health.hp === 0) {
+        playerMon.fainted = true;
+        // SEE HERE - REMOVE STATUSES WHEN THEY'RE ADDED
+        this.player.team[playerMon.slot] = { ...playerMon };
+        // SEE HERE -- HANDLE SWITCH IN
+      }
+      if (npcMon.health.hp === 0) {
+        npcMon.fainted = true;
+        // SEE HERE - REMOVE STATUSES WHEN THEY'RE ADDED
+        this.npc.team[npcMon.slot] = { ...npcMon };
+        // SEE HERE -- HANDLE SWITCH IN (take next mon available by default)
+      }
+      // npcSwitchIn();
+    }
+
+    // postBattlePhase()
 
     // this.checkIfWinner();
   }

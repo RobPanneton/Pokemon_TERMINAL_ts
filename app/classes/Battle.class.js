@@ -15,15 +15,18 @@ var Battle = /** @class */ (function () {
         };
         this.logDispatchPokemon(this.player.name, this.currentPokemon.playerPokemon.species);
         this.logDispatchPokemon(this.npc.name, this.currentPokemon.npcPokemon.species);
-        console.log({ player: this.player.team.slot_1.health });
     }
     Battle.prototype.logDispatchPokemon = function (trainerName, pokemonName) {
         console.log("".concat(trainerName, " sent out ").concat(pokemonName, "!"));
     };
     Battle.prototype.initTurn = function () {
+        var playerMon = this.currentPokemon.playerPokemon;
+        var npcMon = this.currentPokemon.npcPokemon;
         var playerMove = (0, attackPrompt_1.attackPrompt)(this.currentPokemon.playerPokemon.attacks);
         var npcMove = (0, getNpcMove_1.getNpcMove)(this.currentPokemon.npcPokemon.attacks);
-        (0, battleTurn_1.battleTurn)(this.currentPokemon.playerPokemon, playerMove, this.currentPokemon.npcPokemon, npcMove);
+        (0, battleTurn_1.battlePhase)(playerMon, playerMove, npcMon, npcMove);
+        // if (this.currentPokemon.playerPokemon)
+        // postBattlePhase()
         // this.checkIfWinner();
     };
     return Battle;
