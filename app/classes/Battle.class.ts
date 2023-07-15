@@ -1,5 +1,5 @@
 import { attackPrompt } from "../battle/battleMenuPrompts/attackPrompt";
-import { battlePhase } from "../battle/battleTurn/battleTurn";
+import { battlePhase, winChecker } from "../battle/battleTurn/battleTurn";
 import { getNpcMove } from "../battle/battleUtils/getNpcMove";
 import { BattlePlayerT, BattlePokemonT } from "../types/BattlePlayer.type";
 import { BattlePlayer } from "./BattlePlayer.class";
@@ -62,6 +62,16 @@ export class Battle {
         // SEE HERE -- HANDLE SWITCH IN (take next mon available by default)
       }
       // npcSwitchIn();
+    }
+
+    if (winChecker(this.player.team)) {
+      this.isFinished = true;
+      this.winner = this.npc.name;
+    }
+
+    if (winChecker(this.npc.team)) {
+      this.isFinished = true;
+      this.winner = this.player.name;
     }
 
     // postBattlePhase()

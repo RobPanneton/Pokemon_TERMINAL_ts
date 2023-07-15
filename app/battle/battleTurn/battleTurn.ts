@@ -31,3 +31,7 @@ export const battlePhase = (
 
   return;
 };
+
+export const winChecker = (team) => {
+  return Object.keys(team).every((slot) => team[slot].fainted);
+};
